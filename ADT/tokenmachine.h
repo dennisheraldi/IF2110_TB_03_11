@@ -7,7 +7,7 @@
 #include "boolean.h"
 #include "charmachine.h"
 
-#define CAPACITY 100
+#define TOKENCAPACITY 100
 #define BLANK ' '
 
 typedef struct {
@@ -18,13 +18,14 @@ typedef struct {
 /* Token Machine State */
 extern boolean endToken;
 extern Token currentToken;
+extern boolean withFileToken;
 
 void ignoreBlank();
 /* Mengabaikan satu atau beberapa BLANK
    I.S. : currentChar sembarang 
    F.S. : currentChar ≠ BLANK atau currentChar = MARK */
 
-void startToken();
+void startToken(boolean file, char filename[]);
 /* I.S. : currentChar sembarang 
    F.S. : endToken = true, dan currentChar = MARK; 
           atau endToken = false, currentToken adalah Token yang sudah diakuisisi,

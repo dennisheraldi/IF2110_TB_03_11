@@ -3,14 +3,17 @@
 
 #include "charmachine.h"
 #include <stdio.h>
+#include <string.h>
 
 char currentChar;
 boolean eot;
+boolean withFile;
 
 static FILE * tape;
 static int retval;
 
-void start() {
+
+void start(boolean file, char filename[]) {
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang
@@ -19,8 +22,12 @@ void start() {
           Jika currentChar = MARK maka EOP akan menyala (true) */
 
 	/* Algoritma */
-	// tape = stdin;
-       tape = fopen("newGames/game1.txt", "r");
+       withFile = file;
+       if (withFile) {
+              tape = fopen(filename, "r");
+       } else {
+	       tape = stdin;
+       }
 	adv();
 }
 
@@ -33,8 +40,12 @@ void adv() {
 
 	/* Algoritma */
 	retval = fscanf(tape,"%c",&currentChar);
-	eot = (currentChar == MARK);
-	if (eot) {
-       fclose(tape);
+       if (withFile) {
+	       eot = (retval == EOF);
+       } else {
+              eot = (currentChar == '\n');
+       }
+	if (eot && withFile) {
+              fclose(tape);
  	}
 }

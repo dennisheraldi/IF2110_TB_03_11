@@ -65,7 +65,7 @@ void copyWord()
 {
    int i;
    i = 0;
-   while (currentChar != BLANK && currentChar != MARK && i < CAPACITY && currentChar != '\n') {
+   while (currentChar != BLANK && currentChar != MARK && i < WORDCAPACITY && currentChar != '\n') {
       currentWord.contents[i] = currentChar;
       adv();
       i++;

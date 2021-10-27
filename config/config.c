@@ -1,12 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 #include "initconfig.h"
 #include "../ADT/tokenmachine.c"
 #include "../ADT/point.c"
 
-void config() {
+void config(char filename[]) {
     int row, col, i, j, counter, val;
+    char filedir[] = "newGames/";
     time = 0;
-    startToken();
+    strcat(filedir, filename);
+    startToken(true, filedir);
     row = currentToken.val;
     advToken();
     col = currentToken.val;

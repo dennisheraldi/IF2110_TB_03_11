@@ -7,12 +7,12 @@
 #include "boolean.h"
 
 #define IDX_UNDEF -1
-#define CAPACITY 5
+#define QUEUECAPACITY 50
 
 /* Definisi elemen dan address */
 typedef int ElType;
 typedef struct {
-	ElType buffer[CAPACITY]; 
+	ElType buffer[QUEUECAPACITY]; 
 	int idxHead;
 	int idxTail;
 } Queue;

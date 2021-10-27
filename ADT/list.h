@@ -10,7 +10,7 @@
 #include "boolean.h"
 
 /*  Kamus Umum */
-#define CAPACITY 100
+#define LISTCAPACITY 100
 /* Kapasitas penyimpanan */
 #define IDX_UNDEF -1
 /* Indeks tak terdefinisi*/
@@ -20,7 +20,7 @@
 /* Definisi elemen dan koleksi objek */
 typedef int ElType;  /* type elemen List */
 typedef struct {
-   ElType contents[CAPACITY]; /* memori tempat penyimpan elemen (container) */
+   ElType contents[LISTCAPACITY]; /* memori tempat penyimpan elemen (container) */
    int nEff;
 } List;
 /* Indeks yang digunakan [0..CAPACITY-1] */

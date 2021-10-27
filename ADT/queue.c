@@ -37,7 +37,7 @@ boolean isFull(Queue q)
 {
     // KAMUS LOKAL
     // ALGORITMA
-    return (IDX_HEAD(q) == 0) && (IDX_TAIL(q) == CAPACITY - 1);
+    return (IDX_HEAD(q) == 0) && (IDX_TAIL(q) == QUEUECAPACITY - 1);
 }
 int length(Queue q)
 /* Mengirimkan banyaknya elemen queue. Mengirimkan 0 jika q kosong. */
@@ -68,7 +68,7 @@ void enqueue(Queue *q, ElType val)
         IDX_HEAD(*q) = 0;
         IDX_TAIL(*q) = 0;
     } else {
-        if (IDX_TAIL(*q) == (CAPACITY - 1)) {
+        if (IDX_TAIL(*q) == (QUEUECAPACITY - 1)) {
             for (i = IDX_HEAD(*q); i <= IDX_TAIL(*q); i++) {
                 (*q).buffer[i - IDX_HEAD(*q)] = (*q).buffer[i];
             }

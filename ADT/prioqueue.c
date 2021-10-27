@@ -37,7 +37,7 @@ boolean isFull(PrioQueue pq)
 {
     // KAMUS LOKAL
     // ALGORITMA
-    return (IDX_HEAD(pq) == 0) && (IDX_TAIL(pq) == CAPACITY - 1);
+    return (IDX_HEAD(pq) == 0) && (IDX_TAIL(pq) == PRIOQUEUECAPACITY - 1);
 }
 
 int length(PrioQueue pq)
@@ -70,7 +70,7 @@ void enqueue(PrioQueue *pq, ElType val)
         IDX_TAIL(*pq) = 0;
         TAIL(*pq) = val;
     } else {
-        if (IDX_TAIL(*pq) == (CAPACITY - 1)) {
+        if (IDX_TAIL(*pq) == (PRIOQUEUECAPACITY - 1)) {
             for (i = IDX_HEAD(*pq); i <= IDX_TAIL(*pq); i++) {
                 (*pq).buffer[i - IDX_HEAD(*pq)] = (*pq).buffer[i];
             }

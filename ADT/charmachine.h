@@ -10,8 +10,9 @@
 /* Char Engine State */
 extern char currentChar;
 extern boolean eot;
+extern boolean withFile;
 
-void start();
+void start(boolean file, char filename[]);
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang
@@ -25,5 +26,6 @@ void adv();
    F.S. : currentChar adalah karakter berikutnya dari currentChar yang lama, 
           currentChar mungkin = MARK
           Jika  currentChar = MARK maka EOP akan menyala (true) */
+
 
 #endif

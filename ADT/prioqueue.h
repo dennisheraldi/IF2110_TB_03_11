@@ -10,7 +10,7 @@
 
 /* Konstanta */
 #define IDX_UNDEF -1
-#define CAPACITY 100
+#define PRIOQUEUECAPACITY 100
 
 /* Deklarasi ElType */
 typedef struct {
@@ -22,7 +22,7 @@ typedef struct {
 
 /* Definisi PrioQueue */
 typedef struct {
-	ElType buffer[CAPACITY];
+	ElType buffer[PRIOQUEUECAPACITY];
 	int idxHead;
 	int idxTail;
 } PrioQueue;

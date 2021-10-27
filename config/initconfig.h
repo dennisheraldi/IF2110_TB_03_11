@@ -17,5 +17,7 @@ extern POINT HQ;
 extern List boughtGadget;
 extern ListDin buildings;
 extern Queue antrian;
+extern char command[50];
+extern int commandLen;
 
 #endif

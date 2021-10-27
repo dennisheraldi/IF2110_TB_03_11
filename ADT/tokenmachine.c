@@ -13,6 +13,7 @@ Deskripsi: File ini berisi ADT mesin token yang memiliki header "tokenmachine.h.
 /* Token Machine State */
 boolean endToken;
 Token currentToken;
+boolean withFileToken;
 
 void ignoreBlank()
 /* Mengabaikan satu atau beberapa BLANK
@@ -24,13 +25,13 @@ void ignoreBlank()
    }
 }
 
-void startToken()
+void startToken(boolean file, char filename[])
 /* I.S. : currentChar sembarang 
    F.S. : endToken = true, dan currentChar = MARK; 
           atau endToken = false, currentToken adalah Token yang sudah diakuisisi,
           currentChar karakter pertama sesudah karakter terakhir Token */
 {
-    start();
+    start(file, filename);
     ignoreBlank();
     if (currentChar == MARK) {
         endToken = true;
@@ -67,7 +68,7 @@ void salinToken()
     int i;
     i = 0;
     currentToken.val = 0;
-    while (!(currentChar == BLANK || currentChar == MARK) && i < CAPACITY && currentChar != '\n') {
+    while (!(currentChar == BLANK || currentChar == MARK) && i < TOKENCAPACITY && currentChar != '\n') {
         if ((currentChar == '0') || (currentChar == '1') || (currentChar == '2') || (currentChar == '3') || (currentChar == '4') || (currentChar == '5') || (currentChar == '6') || (currentChar == '7') || (currentChar == '8') || (currentChar == '9')) {
             switch (currentChar)
             {

@@ -28,7 +28,7 @@ boolean isIdxValidLS(List l, int i)
 /* Mengirimkan true jika i adalah indeks yang valid utk kapasitas List l */
 /* yaitu antara indeks yang terdefinisi utk container*/
 {
-    return i >= 0 && i < CAPACITY;
+    return i >= 0 && i < LISTCAPACITY;
 }
 boolean isIdxEffLS(List l, int i)
 /* Mengirimkan true jika i adalah indeks yang terdefinisi utk List l */
@@ -48,7 +48,7 @@ boolean isEmptyLS(List l)
 boolean isFullLS(List l)
 /* Mengirimkan true jika List l penuh, mengirimkan false jika tidak */
 {
-    return NEFF(l) == CAPACITY;
+    return NEFF(l) == LISTCAPACITY;
 }
 
 /* ********** BACA dan TULIS dengan INPUT/OUTPUT device ********** */
@@ -66,7 +66,7 @@ void readListLS(List *l)
 {
     int n, i;
     scanf("%d", &n);
-    while (!(n >= 0 && n <= CAPACITY)) {
+    while (!(n >= 0 && n <= LISTCAPACITY)) {
         scanf("%d", &n);
     }
     CreateList(l);
