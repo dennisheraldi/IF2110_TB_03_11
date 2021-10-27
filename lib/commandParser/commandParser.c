@@ -6,10 +6,11 @@
 
 boolean isCommandEqual(char input[]) {
     boolean equal;
-    int i;
-    equal = (commandLen == strlen(input));
+    int i, len;
+    len = strlen(input);
+    equal = (commandLen == len);
     i = 0;
-    while (equal && i < strlen(input)) {
+    while (equal && i < len) {
         if (command[i] != input[i]) {
             equal = false;
         }
