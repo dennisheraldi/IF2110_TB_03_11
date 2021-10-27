@@ -9,6 +9,7 @@ int time;
 Matrix map;
 Matrix adjacency;
 POINT currentPosition;
+POINT HQ;
 char command[50];
 int commandLen;
 
