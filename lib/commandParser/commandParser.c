@@ -217,7 +217,7 @@ boolean getCommand() {
     int i;
     i = 0;
     start(false, "x");
-    while (!eot)
+    while (!eot && i < 50)
     {
         command[i] = currentChar;
         i++;
