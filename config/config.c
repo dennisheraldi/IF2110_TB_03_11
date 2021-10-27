@@ -27,7 +27,8 @@ void config(char filename[]) {
     row = currentToken.val;
     advToken();
     col = currentToken.val;
-    currentPosition =  MakePOINT(row, col);
+    currentPosition =  MakePOINT(row - 1, col - 1);
+    HQ = MakePOINT(row - 1, col - 1);
     ELMT(map, row - 1, col - 1) = 8;
     advToken();
     counter = currentToken.val;

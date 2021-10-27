@@ -9,6 +9,7 @@ int time;
 Matrix map;
 Matrix adjacency;
 POINT currentPosition;
+POINT HQ;
 char command[50];
 int commandLen;
 
@@ -21,11 +22,11 @@ int main() {
     printf("- EXIT\n");
     printf("Masukkan pilihan aksi: ");
     getCommand();
-    if (isWordNEW_GAME()) {
+    if (isCommandEqual("NEW GAME")) {
         printf("NEW GAME\n");
-    } else if (isWordLOAD_GAME()) {
+    } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
-    } else if (isWordEXIT()) {
+    } else if (isCommandEqual("EXIT")) {
         printf("EXIT\n");
     }
     return 0;
