@@ -24,14 +24,14 @@ void CreateQueue(Queue *q)
 }
 
 /* ********* Prototype ********* */
-boolean isEmpty(Queue q)
+boolean isEmptyQ(Queue q)
 /* Mengirim true jika q kosong: lihat definisi di atas */
 {
     // KAMUS LOKAL
     // ALGORITMA
     return (IDX_HEAD(q) == IDX_UNDEF) && (IDX_TAIL(q) == IDX_UNDEF);
 }
-boolean isFull(Queue q)
+boolean isFullQ(Queue q)
 /* Mengirim true jika tabel penampung elemen q sudah penuh */
 /* yaitu jika index head bernilai 0 dan index tail bernilai CAPACITY-1 */
 {
@@ -39,18 +39,18 @@ boolean isFull(Queue q)
     // ALGORITMA
     return (IDX_HEAD(q) == 0) && (IDX_TAIL(q) == QUEUECAPACITY - 1);
 }
-int length(Queue q)
+int lengthQ(Queue q)
 /* Mengirimkan banyaknya elemen queue. Mengirimkan 0 jika q kosong. */
 {
     // KAMUS LOKAL
-    int length;
+    int lengthQ;
     // ALGORITMA
-    if (isEmpty(q)) {
-        length = 0;
+    if (isEmptyQ(q)) {
+        lengthQ = 0;
     } else {
-        length = IDX_TAIL(q) - IDX_HEAD(q) + 1;
+        lengthQ = IDX_TAIL(q) - IDX_HEAD(q) + 1;
     }
-    return length;
+    return lengthQ;
 }
 
 /* *** Primitif Add/Delete *** */
@@ -64,7 +64,7 @@ void enqueue(Queue *q, ElType val)
     // KAMUS LOKAL
     int i;
     // ALGORITMA
-    if (isEmpty(*q)) {
+    if (isEmptyQ(*q)) {
         IDX_HEAD(*q) = 0;
         IDX_TAIL(*q) = 0;
     } else {
@@ -89,7 +89,7 @@ void dequeue(Queue *q, ElType *val)
     // KAMUS LOKAL
     // ALGORITMA
     *val = HEAD(*q);
-    if (length(*q) == 1) {
+    if (lengthQ(*q) == 1) {
         IDX_HEAD(*q) = IDX_UNDEF;
         IDX_TAIL(*q) = IDX_UNDEF;
     } else {
@@ -111,7 +111,7 @@ void displayQueue(Queue q)
     int i;
     // ALGORITMA
     printf("[");
-    if (!isEmpty(q)) {
+    if (!isEmptyQ(q)) {
         for (i = IDX_HEAD(q); i <= IDX_TAIL(q); i++) {
             printf("%d", q.buffer[i]);
             if (i != IDX_TAIL(q)) {

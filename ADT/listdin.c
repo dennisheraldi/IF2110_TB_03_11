@@ -376,12 +376,12 @@ void growList(ListDin *l, int num)
     int i;
     /*ALGORITMA*/
     CreateListDin(&temp, CAPACITY(*l) + num);
-    for (i = 0; i < length(*l); i++) {
+    for (i = 0; i < lengthLD(*l); i++) {
         ELMTLD(temp, i) = ELMTLD(*l, i);
     }
     NEFF(temp) = NEFF(*l);
     dealocate(l);
-    copyList(temp, l);
+    copyListLD(temp, l);
     dealocate(&temp);
 }
 
@@ -395,12 +395,12 @@ void shrinkList(ListDin *l, int num)
     int i;
     /*ALGORITMA*/
     CreateListDin(&temp, CAPACITY(*l) - num);
-    for (i = 0; i < length(*l); i++) {
+    for (i = 0; i < lengthLD(*l); i++) {
         ELMTLD(temp, i) = ELMTLD(*l, i);
     }
     NEFF(temp) = NEFF(*l);
     dealocate(l);
-    copyList(temp, l);
+    copyListLD(temp, l);
     dealocate(&temp);
 }
 
@@ -414,11 +414,11 @@ void compactList(ListDin *l)
     int i;
     /*ALGORITMA*/
     CreateListDin(&temp, NEFF(*l));
-    for (i = 0; i < length(*l); i++) {
+    for (i = 0; i < lengthLD(*l); i++) {
         ELMTLD(temp, i) = ELMTLD(*l, i);
     }
     NEFF(temp) = NEFF(*l);
     dealocate(l);
-    copyList(temp, l);
+    copyListLD(temp, l);
     dealocate(&temp);
 }

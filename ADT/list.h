@@ -10,7 +10,7 @@
 #include "boolean.h"
 
 /*  Kamus Umum */
-#define LISTCAPACITY 100
+#define LISTCAPACITY 5 //kapasitas untuk inventory pembelian gadget
 /* Kapasitas penyimpanan */
 #define IDX_UNDEF -1
 /* Indeks tak terdefinisi*/
