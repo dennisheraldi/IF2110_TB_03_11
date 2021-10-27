@@ -19,7 +19,7 @@ boolean isCommandEqual(char input[]) {
     return equal;
 }
 
-boolean getCommand() {
+void getCommand() {
 // Digunakan untuk mendapatkan input secara manual
     int i;
     i = 0;
