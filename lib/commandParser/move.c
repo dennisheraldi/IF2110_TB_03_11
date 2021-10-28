@@ -4,7 +4,13 @@
 #include "../../ADT/matrix.h"
 
 void tambahWaktu(){
-    
+    if(sedangMembawaHeavy){
+
+    } else if(speedboost){
+
+    }else{
+        time++;
+    }
 }
 
 void move(){
@@ -52,7 +58,7 @@ void move(){
             printf("Input tidak valid !\n")
         }
     } while(!valid);
-    currentPosition = LOKASI(reachable[input-1]); //pastikan tipedata currentPosition
+    currentPosition = reachable[input-1];
     tambahWaktu();
     printf("Mobita sekarang berada di titik %s ", NAMA(currentPosition));
     TulisPOINT(LOKASI(currentPosition));
