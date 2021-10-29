@@ -52,10 +52,11 @@ void move(){
     printf("Posisi yang dipilih? (ketik 0 jika ingin kembali)");
     do{
         printf("ENTER COMMAND: ")
-        scanf("%d",&input);
-        valid= (input<counter)
+        getCommand();
+        input=command[0]-'0';
+        valid= ((input<counter) && (0<input));
         if(!valid){
-            printf("Input tidak valid !\n")
+            printf("Input tidak valid !\n");
         }
     } while(!valid);
     currentPosition = reachable[input-1];
