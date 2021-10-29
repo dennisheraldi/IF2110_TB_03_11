@@ -1,14 +1,22 @@
-#include <stdio.h>
-#include <string.h>
 #include "initconfig.h"
-#include "../ADT/tokenmachine.c"
-#include "../ADT/point.c"
 
 void config(char filename[]) {
     int row, col, i, j, counter, val;
+    char c;
+    POINT point;
+    Bangunan building;
+    Barang barang;
+
+    // Konstruktor
+    CreateListDin(&buildings, 27);
+    CreatePrioQueue(&antrianPesanan);
+
     char filedir[] = "newGames/";
     time = 0;
+    balance = 0;
+
     strcat(filedir, filename);
+
     startToken(true, filedir);
     row = currentToken.val;
     advToken();
@@ -27,20 +35,39 @@ void config(char filename[]) {
     row = currentToken.val;
     advToken();
     col = currentToken.val;
-    currentPosition =  MakePOINT(row - 1, col - 1);
-    HQ = MakePOINT(row - 1, col - 1);
+
+    c = '8';
+    point = MakePOINT(row, col);
+    NAME(currentPosition) = c;
+    LOCATION(currentPosition) = point;
+    NAME(HQ) = c;
+    LOCATION(HQ) = point;
+
+    // BANGUNAN
+    NAME(building) = c;
+    LOCATION(building) = point;
+    ELMTLD(buildings, 0) = building;
     ELMT(map, row - 1, col - 1) = 8;
+    // BANGUNAN DAN MAP
     advToken();
     counter = currentToken.val;
     for (i = 0; i < counter; i++) {
         advToken();
         val = currentToken.tkn;
+        NAME(building) = val;
         advToken();
         row = currentToken.val;
+        Absis(LOCATION(building)) = row;
         advToken();
         col = currentToken.val;
+        Ordinat(LOCATION(building)) = col;
         ELMT(map, row - 1, col - 1) = val;
+        ELMTLD(buildings, i + 1) = building;
     }
+    NEFF(buildings) = i + 1;
+    compactList(&buildings);
+
+    // ADJACENCY
     CreateMatrix(counter + 1, counter + 1, &adjacency);
     i = j = 0;
     while (isIdxEffM(adjacency, i, j)) {
@@ -52,33 +79,24 @@ void config(char filename[]) {
         j = 0;
         i++;
     }
-}
 
-void displayMap() {
-    int i, j;
-    for (j = 0; j < COLS(map) + 2; j++) {
-        printf("* ");
-    }
-    printf("\n");
-    for (i = 0; i < ROWS(map); i++) {
-        printf("* ");
-        for (j = 0; j < COLS(map); j++) {
-            if (ELMT(map, i, j) > 8) {
-                printf("%c", ELMT(map, i, j));
-            } else if (ELMT(map, i, j) == 8) {
-                printf("%d", ELMT(map, i, j));
-            } else {
-                printf(" ");
-            }
-            if(j != COLS(map) - 1) {
-                printf(" ");
-            }
+    // ANTRIANBARANG
+    advToken();
+    counter = currentToken.val;
+    i = 0;
+    for (i = 0; i < counter; i++) {
+        advToken();
+        ORDER_TIME(barang) = currentToken.val;
+        advToken();
+        PICKUP_LOC(barang) = currentToken.tkn;
+        advToken();
+        DROPOFF_LOC(barang) = currentToken.tkn;
+        advToken();
+        TYPE(barang) = currentToken.tkn;
+        if (currentToken.tkn == 'P') {
+            advToken();
+            EXP_TIME(barang) = currentToken.val;
         }
-        printf(" *");
-        printf("\n");
-
-    }
-    for (j = 0; j < COLS(map) + 2; j++) {
-        printf("* ");
+        enqueuePrio(&antrianPesanan, barang);
     }
 }

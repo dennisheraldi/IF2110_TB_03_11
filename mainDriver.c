@@ -1,17 +1,16 @@
-#include <stdio.h>
-#include "config/initconfig.h"
 #include "config/config.c"
-#include "ADT/matrix.c"
-#include "ADT/point.h"
 #include "lib/commandParser/commandParser.c"
 
 int time;
+int balance;
 Matrix map;
 Matrix adjacency;
-POINT currentPosition;
-POINT HQ;
-char command[50];
+Bangunan currentPosition;
+Bangunan HQ;
+char command[20];
 int commandLen;
+ListDin buildings;
+PrioQueue antrianPesanan;
 
 int main() {
     config("game1.txt");

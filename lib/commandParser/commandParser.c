@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string.h>
 #include "../../config/initconfig.h"
-#include "../../ADT/boolean.h"
-#include "../../ADT/charmachine.h"
 
 boolean isCommandEqual(char input[]) {
     boolean equal;

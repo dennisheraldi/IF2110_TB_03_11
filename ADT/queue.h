@@ -8,12 +8,12 @@
 #include "barang.h"
 
 #define IDX_UNDEF -1
-#define QUEUECAPACITY 50
+#define QUEUECAPACITY 30
 
 /* Definisi elemen dan address */
-typedef Barang ElType;
+// typedef Barang ElType;
 typedef struct {
-	ElType buffer[QUEUECAPACITY]; 
+	Barang buffer[QUEUECAPACITY]; 
 	int idxHead;
 	int idxTail;
 } Queue;
@@ -44,14 +44,14 @@ int lengthQ(Queue q);
 /* Mengirimkan banyaknya elemen queue. Mengirimkan 0 jika q kosong. */
 
 /* *** Primitif Add/Delete *** */
-void enqueue(Queue *q, ElType val);
+void enqueue(Queue *q, Barang val);
 /* Proses: Menambahkan val pada q dengan aturan FIFO */
 /* I.S. q mungkin kosong, tabel penampung elemen q TIDAK penuh */
 /* F.S. val menjadi TAIL yang baru, IDX_TAIL "mundur".
         Jika q penuh semu, maka perlu dilakukan aksi penggeseran "maju" elemen-elemen q
         menjadi rata kiri untuk membuat ruang kosong bagi TAIL baru  */
 
-void dequeue(Queue *q, ElType *val);
+void dequeue(Queue *q, Barang *val);
 /* Proses: Menghapus val pada q dengan aturan FIFO */
 /* I.S. q tidak mungkin kosong */
 /* F.S. val = nilai elemen HEAD pd I.S., HEAD dan IDX_HEAD "mundur"; 
