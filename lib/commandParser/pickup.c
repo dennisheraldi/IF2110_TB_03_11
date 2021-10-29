@@ -17,6 +17,7 @@ void pickup(){
             printf("Pesanan berupa Normal Item berhasil diambil!");
         } else {
             printf("Pesanan berupa Heavy Item berhasil diambil!");
+            sedangMembawaHeavy=true;
         }
         printf("Tujuan Pesanan: %c", DROPOFF_LOC(temp));
     }
