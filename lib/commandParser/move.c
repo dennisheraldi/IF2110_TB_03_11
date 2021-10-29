@@ -54,7 +54,7 @@ void move(){
         printf("ENTER COMMAND: ")
         getCommand();
         input=command[0]-'0';
-        valid= ((input<counter) && (0<input));
+        valid= ((input<=counter) && (0<input));
         if(!valid){
             printf("Input tidak valid !\n");
         }
