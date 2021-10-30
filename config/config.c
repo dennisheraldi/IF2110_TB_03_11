@@ -62,6 +62,7 @@ void config(char filename[]) {
         col = currentToken.val;
         Ordinat(LOCATION(building)) = col;
         ELMT(map, row - 1, col - 1) = val;
+        CreateQueue(&ANTREAN(building));
         ELMTLD(buildings, i + 1) = building;
     }
     NEFF(buildings) = i + 1;

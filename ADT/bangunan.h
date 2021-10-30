@@ -12,11 +12,11 @@
 typedef struct {
     char name; //Nama dipastikan satu karakter
     POINT location;
-    // Queue antrean;
+    Queue antrean;
 } Bangunan;
 
 #define NAME(p) (p).name
 #define LOCATION(p) (p).location
-// #define ANTREAN(p) (p).antrean;
+#define ANTREAN(p) (p).antrean
 
 #endif
