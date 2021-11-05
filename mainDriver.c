@@ -3,6 +3,7 @@
 
 int time;
 int balance;
+Stack tas;
 Matrix map;
 Matrix adjacency;
 Bangunan currentPosition;

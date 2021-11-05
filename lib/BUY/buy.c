@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include "../../ADT/listdin.c"
 #include "../../config/initconfig.h"
 
 void buy(){
 
-    CreateListLS(&boughtGadget); // Inisialisasi inventory
     int pilihan;
 
     // Menampilkan list gadget yang dapat dibeli

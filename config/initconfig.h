@@ -7,6 +7,7 @@
 #include "../ADT/boolean.h"
 #include "../ADT/bangunan.h"
 #include "../ADT/queue.c"
+#include "../ADT/stack.c"
 #include "../ADT/prioqueue.c"
 #include "../ADT/barang.h"
 #include "../ADT/matrix.c"
@@ -18,6 +19,7 @@
 
 extern int time;
 extern int balance;
+extern Stack tas;
 extern Matrix adjacency;
 extern Matrix map;
 extern Bangunan currentPosition;

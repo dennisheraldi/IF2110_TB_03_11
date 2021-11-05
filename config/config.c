@@ -6,10 +6,13 @@ void config(char filename[]) {
     POINT point;
     Bangunan building;
     Barang barang;
+    Stack tas;
 
     // Konstruktor
     CreateListDin(&buildings, 27);
     CreatePrioQueue(&antrianPesanan);
+    CreateListLS(&boughtGadget); // Inisialisasi inventory
+    CreateStack(&tas); // Inisialisasi tas
 
     char filedir[] = "newGames/";
     time = 0;
