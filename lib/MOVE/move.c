@@ -9,13 +9,19 @@ void tambahWaktu(){
     } else if(isSpeedBoostActive){
         if(saatnyaTambahWaktu){
             time++;
+            sisaLokasi--;
             saatnyaTambahWaktu=false;
         }else{
             saatnyaTambahWaktu=true;
+            sisaLokasi--;
+        }
+        if(sisaLokasi==0){
+            isSpeedBoostActive=false;
         }
     }else{
         time++;
     }
+    //cek apakah ada perishable items yang hangus
 }
 
 void move(){

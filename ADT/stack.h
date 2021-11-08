@@ -14,12 +14,14 @@
 typedef struct {
   Barang buffer[STACKCAPACITY]; /* tabel penyimpan elemen */
   int idxTop;              /* alamat TOP: elemen puncak */
+  int Neff;
 } Stack;
 
 /* ********* AKSES (Selektor) ********* */
 /* Jika s adalah Stack, maka akses elemen : */
 #define IDX_TOP(s) (s).idxTop
 #define     TOP(s) (s).buffer[(s).idxTop]
+#define NEFF(s) (s).Neff
 
 /* *** Konstruktor/Kreator *** */
 void CreateStack(Stack *s);
