@@ -11,8 +11,10 @@ void config(char filename[]) {
     // Konstruktor
     CreateListDin(&buildings, 27);
     CreatePrioQueue(&antrianPesanan);
+    CreateListLinked(&antrian);
     CreateListLS(&boughtGadget); // Inisialisasi inventory
     CreateStack(&tas); // Inisialisasi tas
+    
 
     char filedir[] = "newGames/";
     time = 0;
@@ -102,5 +104,6 @@ void config(char filename[]) {
             EXP_TIME(barang) = currentToken.val;
         }
         enqueuePrio(&antrianPesanan, barang);
+        insertLast(&antrian,barang);
     }
 }

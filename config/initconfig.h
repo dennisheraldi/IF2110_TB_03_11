@@ -15,6 +15,7 @@
 #include "../ADT/tokenmachine.c"
 #include "../ADT/list.c"
 #include "../ADT/listdin.c"
+#include "../ADT/list_linked.h"
 
 
 extern int time;
@@ -27,6 +28,7 @@ extern Bangunan HQ;
 extern List boughtGadget;
 extern ListDin buildings;
 extern PrioQueue antrianPesanan;
+extern ListLinked antrian; // ini buat TO_DO dan IN_PROGRESS
 extern char command[20];
 extern int commandLen;
 
