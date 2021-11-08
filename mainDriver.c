@@ -12,6 +12,10 @@ char command[20];
 int commandLen;
 ListDin buildings;
 PrioQueue antrianPesanan;
+int jumlahHeavyDiTas;
+boolean saatnyaTambahWaktu;
+boolean isSpeedBoostActive;
+int sisaLokasi;
 
 int main() {
     config("game1.txt");

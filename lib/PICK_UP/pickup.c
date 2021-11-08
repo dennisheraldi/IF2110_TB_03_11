@@ -10,6 +10,7 @@ void pickup(){
         printf("Pesanan tidak ditemukan!\n");
     }else{
         dequeue(&ANTREAN(currentPosition),&temp);
+        PICKUP_TIME(temp)=time;
         push(&tas,temp);
         if(TYPE(temp)=='p'){
             printf("Pesanan berupa Perishable Item berhasil diambil!");
@@ -17,7 +18,10 @@ void pickup(){
             printf("Pesanan berupa Normal Item berhasil diambil!");
         } else {
             printf("Pesanan berupa Heavy Item berhasil diambil!");
-            sedangMembawaHeavy=true;
+            jumlahHeavyDiTas++;
+            isSpeedBoostActive=false; //Ability speed boost hilang
+            sisaLokasi=0;
+            saatnyaTambahWaktu=false;
         }
         printf("Tujuan Pesanan: %c", DROPOFF_LOC(temp));
     }

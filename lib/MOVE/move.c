@@ -4,10 +4,15 @@
 #include "../../ADT/matrix.h"
 
 void tambahWaktu(){
-    if(sedangMembawaHeavy){
-
-    } else if(speedboost){
-
+    if(jumlahHeavyDiTas>0){
+        time+=(1+jumlahHeavyDiTas);
+    } else if(isSpeedBoostActive){
+        if(saatnyaTambahWaktu){
+            time++;
+            saatnyaTambahWaktu=false;
+        }else{
+            saatnyaTambahWaktu=true;
+        }
     }else{
         time++;
     }
