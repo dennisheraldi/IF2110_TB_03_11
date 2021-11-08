@@ -16,6 +16,7 @@ int jumlahHeavyDiTas;
 boolean saatnyaTambahWaktu;
 boolean isSpeedBoostActive;
 int sisaLokasi;
+List inProgress;
 
 int main() {
     config("game1.txt");

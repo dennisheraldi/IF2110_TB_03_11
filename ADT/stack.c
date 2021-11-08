@@ -17,6 +17,7 @@ void CreateStack(Stack *s)
 /* Proses : Melakukan alokasi, membuat sebuah s kosong */
 {
     IDX_TOP(*s) = IDX_UNDEF;
+    NEFF(*s)=3;
 }
 
 /* ************ Prototype ************ */
