@@ -1,4 +1,5 @@
 #include "initconfig.h"
+#include "../ADT/list.h"
 
 void config(char filename[]) {
     int row, col, i, j, counter, val;

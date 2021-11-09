@@ -92,6 +92,20 @@ void setElmt(ListLinked *l, int idx, Barang val)
 /* Jika ada, mengembalikan indeks elemen pertama l yang bernilai val */
 /* Mengembalikan IDX_UNDEF jika tidak ditemukan */
 
+int length(ListLinked l)
+/* Mengirimkan banyaknya elemen list; mengirimkan 0 jika list kosong */
+{
+    Address p = l;
+    int ctr = 0;
+    while (p != NULL)
+    {
+        ctr++;
+        p = NEXT(p);
+    }
+    return ctr;
+    
+}
+
 /****************** PRIMITIF BERDASARKAN NILAI ******************/
 /*** PENAMBAHAN ELEMEN ***/
 void insertFirst(ListLinked *l, Barang val)
@@ -265,19 +279,8 @@ void deleteAt(ListLinked *l, int idx, Barang *val)
 /* Jika list kosong : menulis [] */
 /* Tidak ada tambahan karakter apa pun di awal, akhir, atau di tengah */
 
-/*int length(List l)
-{
-    Address p = l;
-    int ctr = 0;
-    while (p != NULL)
-    {
-        ctr++;
-        p = NEXT(p);
-    }
-    return ctr;
-    
-}*/
-/* Mengirimkan banyaknya elemen list; mengirimkan 0 jika list kosong */
+
+
 
 
 /****************** PROSES TERHADAP LIST ******************/

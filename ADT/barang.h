@@ -2,8 +2,6 @@
 #ifndef BARANG_H
 #define BARANG_H
 
-#include "bangunan.h"
-
 typedef struct{
     int waktu_pickup;
     int waktu_order;

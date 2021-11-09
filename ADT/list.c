@@ -1,4 +1,5 @@
 #include "list.h"
+#include <stdio.h>
 /*
 Nama    : David Karel Halomoan
 NIM     : 16520354
@@ -6,7 +7,7 @@ NIM     : 16520354
 
 /* ********** KONSTRUKTOR ********** */
 /* Konstruktor : create List kosong  */
-void CreateList(List *l)
+void CreateListLS(List *l)
 /* I.S. l sembarang */
 /* F.S. Terbentuk List l kosong dengan kapasitas CAPACITY */
 /* Proses: Inisialisasi semua elemen List l dengan VAL_UNDEF */
@@ -69,7 +70,7 @@ void readListLS(List *l)
     while (!(n >= 0 && n <= LISTCAPACITY)) {
         scanf("%d", &n);
     }
-    CreateList(l);
+    CreateListLS(l);
     for (i = 0; i < n; i++) {
         scanf("%d", &ELMTLS(*l, i));
     }
@@ -106,7 +107,7 @@ List plusMinusTab(List l1, List l2, boolean plus)
 {
     int i = 0;
     List l;
-    CreateList(&l);
+    CreateListLS(&l);
     if (plus) {
         while (isIdxEffLS(l1, i)){
             ELMTLS(l, i) = ELMTLS(l1, i) + ELMTLS(l2, i);

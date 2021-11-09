@@ -24,13 +24,13 @@ void ignoreBlank()
    }
 }
 
-void startWord()
+void startWord(boolean file, char filename[])
 /* I.S. : currentChar sembarang 
    F.S. : endWord = true, dan currentChar = MARK; 
           atau endWord = false, currentWord adalah kata yang sudah diakuisisi,
           currentChar karakter pertama sesudah karakter terakhir kata */
 {
-   start();
+   start(file,filename);
    ignoreBlank();
    if (currentChar == MARK) {
       endWord = true;

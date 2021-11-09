@@ -21,7 +21,7 @@ typedef struct {
 /* Jika s adalah Stack, maka akses elemen : */
 #define IDX_TOP(s) (s).idxTop
 #define     TOP(s) (s).buffer[(s).idxTop]
-#define NEFF(s) (s).Neff
+#define EFF(s) (s).Neff
 
 /* *** Konstruktor/Kreator *** */
 void CreateStack(Stack *s);

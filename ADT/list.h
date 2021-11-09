@@ -38,7 +38,7 @@ typedef struct {
 
 /* ********** KONSTRUKTOR ********** */
 /* Konstruktor : create List kosong  */
-void CreateList(List *l);
+void CreateListLS(List *l);
 /* I.S. l sembarang */
 /* F.S. Terbentuk List l kosong dengan kapasitas CAPACITY */
 /* Proses: Inisialisasi semua elemen List l dengan VAL_UNDEF */
