@@ -19,11 +19,15 @@ int main(){
                 printf("Pesanan Heavy Item berhasil diantarkan\n");
                 paid = 400; 
                 // ability: speed boost
+                isSpeedBoostActive = true;
+                saatnyaTambahWaktu = false;
+                sisaLokasi = 10;
                 break;
             case 3:
                 printf("Pesanan Perishable Item berhasil diantarkan\n");
                 paid = 400;
                 // ability: increase capacity
+                EFF(tas)+=1;
                 break;
             default:
                 break;

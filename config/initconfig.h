@@ -31,5 +31,10 @@ extern PrioQueue antrianPesanan;
 extern ListLinked antrian; // ini buat TO_DO dan IN_PROGRESS
 extern char command[20];
 extern int commandLen;
+extern int jumlahHeavyDiTas;
+extern boolean saatnyaTambahWaktu;
+extern boolean isSpeedBoostActive;
+extern int sisaLokasi;
+extern List inProgress;
 
 #endif
