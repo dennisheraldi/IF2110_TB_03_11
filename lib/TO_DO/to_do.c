@@ -3,10 +3,12 @@
 void displayList()
 {
     int length = lengthPrio(antrianPesanan);
-    for (int i = 0; i < length; i++)
+    Address p = FIRST(antrian);
+    int count = 0;
+    while (p != NULL)
     {
-        Barang temp = antrianPesanan.buffer[i];
-        printf("%d. ",(i+1));
+        Barang temp = INFO(p);
+        printf("%d. ",(count+1));
         printf("%c -> %c ",PICKUP_LOC(temp),DROPOFF_LOC(temp));
 
         if (TYPE(temp) == "N")
@@ -22,5 +24,6 @@ void displayList()
             printf("(Perishable Item)");
         }
         printf("\n");
+        p = NEXT(p);
     }
 }
