@@ -1,6 +1,9 @@
 {
   "files.associations": {
     "initconfig.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "list_linked.h": "c",
+    "list.h": "c",
+    "wordmachine.h": "c"
   }
 }

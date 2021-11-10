@@ -1,5 +1,5 @@
-#include "config/config.c"
-#include "lib/commandParser/commandParser.c"
+#include "config/config.h"
+#include "lib/commandParser/commandParser.h"
 
 int time;
 int balance;
@@ -16,7 +16,9 @@ int jumlahHeavyDiTas;
 boolean saatnyaTambahWaktu;
 boolean isSpeedBoostActive;
 int sisaLokasi;
-List inProgress;
+ListLinked inProgress;
+List boughtGadget;
+ListLinked antrian;
 
 int main() {
     config("game1.txt");

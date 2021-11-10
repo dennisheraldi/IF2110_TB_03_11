@@ -1,20 +1,16 @@
 #include <stdio.h>
-#include "../../ADT/bangunan.h"
-#include "../../ADT/queue.h"
-#include "../../ADT/barang.h"
-#include "../../ADT/stack.h"
-#include "../../ADT/list.h"
+#include "../../config/initconfig.h"
 
 void pickup(){
     Barang temp;
-    if(lengthLS(inProgress)<NEFF(tas)){
-        if(isEmpty(ANTREAN(currentPosition))){
+    if(length(inProgress)<NEFFQ(tas)){
+        if(isEmptyQ(ANTREAN(currentPosition))){
             printf("Pesanan tidak ditemukan!\n");
         }else{
             dequeue(&ANTREAN(currentPosition),&temp);
             PICKUP_TIME(temp)=time;
             push(&tas,temp);
-            insertLastLS(&inProgress,temp);
+            insertLast(&inProgress,temp);
             if(TYPE(temp)=='p'){
                 printf("Pesanan berupa Perishable Item berhasil diambil!\n");
             }else if(TYPE(temp)=='n'){

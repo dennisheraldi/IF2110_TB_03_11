@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "wordmachine.h"
-#include "charmachine.c"
+#include "charmachine.h"
 
 /*
 Nama: David Karel Halomoan
@@ -14,7 +14,7 @@ Deskripsi: File ini berisi ADT mesin kata yang memiliki header "wordmachine.h"
 boolean endWord;
 Word currentWord;
 
-void ignoreBlank()
+void ignoreBlankW()
 /* Mengabaikan satu atau beberapa BLANK
    I.S. : currentChar sembarang 
    F.S. : currentChar ≠ BLANK atau currentChar = MARK */
@@ -31,7 +31,7 @@ void startWord(boolean file, char filename[])
           currentChar karakter pertama sesudah karakter terakhir kata */
 {
    start(file,filename);
-   ignoreBlank();
+   ignoreBlankW();
    if (currentChar == MARK) {
       endWord = true;
    } else {
@@ -47,7 +47,7 @@ void advWord()
           Jika currentChar = MARK, endWord = true.		  
    Proses : Akuisisi kata menggunakan procedure copyWord */
 {
-   ignoreBlank();
+   ignoreBlankW();
    if (currentChar == MARK) {
       endWord = true;
    } else {

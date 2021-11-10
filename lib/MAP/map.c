@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "../../ADT/pcolor.h"
+//#include <stdio.h>
+//#include "../../ADT/pcolor.h"
 #include "../../config/initconfig.h"
 
 void displayMap()

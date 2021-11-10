@@ -44,6 +44,8 @@ int indexOf(ListLinked l, Barang val);
 /* Jika ada, mengembalikan indeks elemen pertama l yang bernilai val */
 /* Mengembalikan IDX_UNDEF jika tidak ditemukan */
 
+int length(ListLinked l);
+
 /****************** PRIMITIF BERDASARKAN NILAI ******************/
 /*** PENAMBAHAN ELEMEN ***/
 void insertFirst(ListLinked *l, Barang val);

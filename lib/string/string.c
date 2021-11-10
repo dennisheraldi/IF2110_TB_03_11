@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "../../ADT/wordmachine.h"
+#include "../../config/initconfig.h"
 
 Word concatenate(Word w1, Word w2) {
     Word w;

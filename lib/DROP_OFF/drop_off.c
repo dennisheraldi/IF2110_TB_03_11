@@ -1,16 +1,16 @@
-#include "../../ADT/stack.c"
+//#include "../../ADT/stack.c"
 #include "../../config/initconfig.h"
-#include <stdio.h>
+//#include <stdio.h>
 
-int main(){
+int drop_off(){
     // COMMAND: DROP_OFF
     Barang temp;
     int paid;
     
     // Syarat pengantaran barang adalah barang harus diantar pada lokasi yang sesuai
     if (DROPOFF_LOC(TOP(tas)) == NAME(currentPosition)){ 
+        pop(&tas, &temp); 
         switch(TYPE(temp)){
-            pop(&tas, &temp); 
             case 1:
                 printf("Pesanan Normal Item berhasil diantarkan\n");
                 paid = 200;
@@ -27,7 +27,7 @@ int main(){
                 printf("Pesanan Perishable Item berhasil diantarkan\n");
                 paid = 400;
                 // ability: increase capacity
-                EFF(tas)+=1;
+                NEFFQ(tas)+=1;
                 break;
             default:
                 break;

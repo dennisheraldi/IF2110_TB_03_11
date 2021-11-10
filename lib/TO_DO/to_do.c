@@ -11,15 +11,15 @@ void displayList()
         printf("%d. ",(count+1));
         printf("%c -> %c ",PICKUP_LOC(temp),DROPOFF_LOC(temp));
 
-        if (TYPE(temp) == "N")
+        if (TYPE(temp) == 'N')
         {
             printf("(Normal Item)");
         }
-        else if (TYPE(temp) == "H")
+        else if (TYPE(temp) == 'H')
         {
             printf("(Heavy Item)");
         }
-        else if (TYPE(temp) == "P")
+        else if (TYPE(temp) == 'P')
         {
             printf("(Perishable Item)");
         }

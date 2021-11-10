@@ -6,16 +6,17 @@
 #include <string.h>
 #include "../ADT/boolean.h"
 #include "../ADT/bangunan.h"
-#include "../ADT/queue.c"
-#include "../ADT/stack.c"
-#include "../ADT/prioqueue.c"
+#include "../ADT/queue.h"
+#include "../ADT/stack.h"
+#include "../ADT/prioqueue.h"
 #include "../ADT/barang.h"
-#include "../ADT/matrix.c"
-#include "../ADT/point.c"
-#include "../ADT/tokenmachine.c"
-#include "../ADT/list.c"
-#include "../ADT/listdin.c"
+#include "../ADT/matrix.h"
+#include "../ADT/point.h"
+#include "../ADT/tokenmachine.h"
+#include "../ADT/list.h"
+#include "../ADT/listdin.h"
 #include "../ADT/list_linked.h"
+#include "../ADT/pcolor.h"
 
 
 extern int time;
@@ -35,6 +36,6 @@ extern int jumlahHeavyDiTas;
 extern boolean saatnyaTambahWaktu;
 extern boolean isSpeedBoostActive;
 extern int sisaLokasi;
-extern List inProgress;
+extern ListLinked inProgress;
 
 #endif
