@@ -31,6 +31,35 @@ int main() {
     getCommand();
     if (isCommandEqual("NEW GAME")) {
         printf("NEW GAME\n");
+        displayMatrix(adjacency);
+        while(true){
+            printf("Waktu: %d\n", time);
+            printf("ENTER COMMAND: ");
+            getCommand();
+            if(isCommandEqual("MOVE")){
+                move();
+            }else if(isCommandEqual("PICK_UP")){
+                pickup();
+            }else if(isCommandEqual("DROP_OFF")){
+                drop_off();
+            }else if(isCommandEqual("MAP")){
+                displayMap();
+            }else if(isCommandEqual("TO_DO")){
+                displayList();
+            }else if(isCommandEqual("IN_PROGRESS")){
+
+            }else if(isCommandEqual("BUY")){
+                buy();
+            }else if(isCommandEqual("INVENTORY")){
+                
+            }else if(isCommandEqual("HELP")){
+                
+            }else if(isCommandEqual("SAVE_GAME")){
+                
+            }else if(isCommandEqual("RETURN")){
+                
+            }
+        }
     } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
     } else if (isCommandEqual("EXIT")) {

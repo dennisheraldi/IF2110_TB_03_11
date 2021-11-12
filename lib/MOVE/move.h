@@ -1,0 +1,2 @@
+void tambahWaktu();
+void move();

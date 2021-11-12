@@ -17,7 +17,12 @@
 #include "../ADT/listdin.h"
 #include "../ADT/list_linked.h"
 #include "../ADT/pcolor.h"
-
+#include "../lib/BUY/buy.h"
+#include "../lib/DROP_OFF/drop_off.h"
+#include "../lib/MAP/map.h"
+#include "../lib/MOVE/move.h"
+#include "../lib/PICK_UP/pickup.h"
+#include "../lib/TO_DO/to_do.h"
 
 extern int time;
 extern int balance;

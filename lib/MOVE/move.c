@@ -59,7 +59,7 @@ void move(){
         }
     }
     //meminta input lokasi mana yang ingin dikunjungi
-    printf("Posisi yang dipilih? (ketik 0 jika ingin kembali)");
+    printf("Posisi yang dipilih? (ketik 0 jika ingin kembali)\n");
     do{
         printf("ENTER COMMAND: ");
         getCommand();
