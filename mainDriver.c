@@ -31,7 +31,7 @@ int main() {
     getCommand();
     if (isCommandEqual("NEW GAME")) {
         printf("NEW GAME\n");
-        // displayMatrix(adjacency);
+        //displayMatrix(adjacency);
         // printf("\n");
         // displayMatrix(map);
         while(true){

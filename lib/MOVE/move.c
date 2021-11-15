@@ -35,12 +35,13 @@ void move(){
     if(EQ(LOCATION(HQ),LOCATION(currentPosition))){
         nomor=0;
     } else {
+        printf("masuk\n");
         i=0;
         found=false;
         while(!found && isIdxValidLD(buildings,i)){
             if(EQ(LOCATION(currentPosition),LOCATION(ELMTLD(buildings,i)))){
                 found=true;
-                nomor=i+1;
+                nomor=i;
             } else {
                 i++;
             }
@@ -49,13 +50,13 @@ void move(){
     //cek adjacency matrix lalu cetak bila dapat diakses
     j=0;
     counter=1;
-    for(i=0;isIdxEffM(adjacency,nomor,j);j++){
+    for(j=0;isIdxEffM(adjacency,nomor,j);j++){
         if(ELMT(adjacency,nomor,j)==1){
-            printf("%d. %c ", counter, NAME(ELMTLD(buildings,i)));
-            TulisPOINT(LOCATION(ELMTLD(buildings,i)));
+            printf("%d. %c ", counter, NAME(ELMTLD(buildings,j)));
+            TulisPOINT(LOCATION(ELMTLD(buildings,j)));
             printf("\n");
+            reachable[counter-1]=ELMTLD(buildings,j);
             counter++;
-            reachable[counter-1]=ELMTLD(buildings,i);
         }
     }
     //meminta input lokasi mana yang ingin dikunjungi
