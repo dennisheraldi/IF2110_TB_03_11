@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "vector.h"
 #include <math.h>
+#include <stdlib.h>
+
 
 /* *** DEFINISI PROTOTIPE PRIMITIF *** */
 /* *** Konstruktor membentuk VECTOR *** */
@@ -23,7 +25,7 @@ void TulisVector(VECTOR v)
 /* I.S. v terdefinisi */
 /* F.S. v tertulis di layar dengan format "<X,Y>" */
 {
-    printf("<%.2f,%.2f>", AbsisComponent(v), OrdinatComponent(v));
+    printf("<%.2f,%.2f>", (double)AbsisComponent(v), (double)OrdinatComponent(v));
 }
 
 /* *** KELOMPOK OPERASI LAIN TERHADAP TYPE *** */

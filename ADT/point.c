@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "point.h"
 #include <math.h>
+#include <stdlib.h>
+
 
 /* *** DEFINISI PROTOTIPE PRIMITIF *** */
 /* *** Konstruktor membentuk POINT *** */
@@ -38,7 +40,7 @@ void TulisPOINT(POINT P)
 /* I.S. P terdefinisi */
 /* F.S. P tertulis di layar dengan format "(X,Y)" */
 {
-   printf("(%.2f,%.2f)", Absis(P), Ordinat(P));
+   printf("(%.2f,%.2f)", (double)Absis(P), (double)Ordinat(P));
 }
 
 /* *** Kelompok operasi relasional terhadap POINT *** */
@@ -193,6 +195,6 @@ void Putar(POINT *P, float Sudut)
    double angle = (Sudut / 360) * 2 * M_PI;
    float absis = Absis(*P);
    float ordinat = Ordinat(*P);
-   Absis(*P) = absis * cos(-angle) - ordinat * sin(-angle);
-   Ordinat(*P) = absis * sin(-angle) + ordinat * cos(-angle);
+   Absis(*P) = absis * cosf(-angle) - ordinat * sin(-angle);
+   Ordinat(*P) = absis * sin(-angle) + ordinat * cosf(-angle);
 }

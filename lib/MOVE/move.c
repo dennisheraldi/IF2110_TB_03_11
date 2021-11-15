@@ -51,7 +51,7 @@ void move(){
     counter=1;
     for(i=0;isIdxEffM(adjacency,nomor,j);j++){
         if(ELMT(adjacency,nomor,j)==1){
-            printf("%d. %s ", counter, NAME(ELMTLD(buildings,i)));
+            printf("%d. %c ", counter, NAME(ELMTLD(buildings,i)));
             TulisPOINT(LOCATION(ELMTLD(buildings,i)));
             printf("\n");
             counter++;
@@ -71,7 +71,7 @@ void move(){
     } while(!valid);
     currentPosition = reachable[input-1];
     tambahWaktu();
-    printf("Mobita sekarang berada di titik %s ", NAME(currentPosition));
+    printf("Mobita sekarang berada di titik %c ", NAME(currentPosition));
     TulisPOINT(LOCATION(currentPosition));
     printf("!\n");
 }

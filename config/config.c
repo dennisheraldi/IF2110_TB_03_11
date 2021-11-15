@@ -31,7 +31,7 @@ void config(char filename[]) {
     i = j = 0;
     while (isIdxEffM(map, i, j)) {
         while (isIdxEffM(map, i, j)) {
-            ELMT(map, i, j) = 0;
+            ELMT(map, i, j) = -1;
             j++;
         }
         j = 0;
@@ -67,6 +67,7 @@ void config(char filename[]) {
         advToken();
         col = currentToken.val;
         Ordinat(LOCATION(building)) = col;
+        // printf("%d", val);
         ELMT(map, row - 1, col - 1) = val;
         CreateQueue(&ANTREAN(building));
         ELMTLD(buildings, i + 1) = building;
@@ -105,6 +106,6 @@ void config(char filename[]) {
             EXP_TIME(barang) = currentToken.val;
         }
         enqueuePrio(&antrianPesanan, barang);
-        insertLast(&antrian,barang);
+        // insertLast(&antrian,barang);
     }
 }

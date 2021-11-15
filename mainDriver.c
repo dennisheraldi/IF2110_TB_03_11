@@ -31,7 +31,9 @@ int main() {
     getCommand();
     if (isCommandEqual("NEW GAME")) {
         printf("NEW GAME\n");
-        displayMatrix(adjacency);
+        // displayMatrix(adjacency);
+        // printf("\n");
+        // displayMatrix(map);
         while(true){
             printf("Waktu: %d\n", time);
             printf("ENTER COMMAND: ");
@@ -41,7 +43,7 @@ int main() {
             }else if(isCommandEqual("PICK_UP")){
                 pickup();
             }else if(isCommandEqual("DROP_OFF")){
-                drop_off();
+                // drop_off();
             }else if(isCommandEqual("MAP")){
                 displayMap();
             }else if(isCommandEqual("TO_DO")){
