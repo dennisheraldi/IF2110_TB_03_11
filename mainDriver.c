@@ -43,7 +43,7 @@ int main() {
             }else if(isCommandEqual("PICK_UP")){
                 pickup();
             }else if(isCommandEqual("DROP_OFF")){
-                // drop_off();
+                drop_off();
             }else if(isCommandEqual("MAP")){
                 displayMap();
             }else if(isCommandEqual("TO_DO")){

@@ -10,12 +10,13 @@ int drop_off(){
     // Syarat pengantaran barang adalah barang harus diantar pada lokasi yang sesuai
     if (DROPOFF_LOC(TOP(tas)) == NAME(currentPosition)){ 
         pop(&tas, &temp); 
+        printf("%c",TYPE(temp));
         switch(TYPE(temp)){
-            case 1:
+            case 'N':
                 printf("Pesanan Normal Item berhasil diantarkan\n");
                 paid = 200;
                 break;
-            case 2:
+            case 'H':
                 printf("Pesanan Heavy Item berhasil diantarkan\n");
                 paid = 400; 
                 // ability: speed boost
@@ -23,7 +24,7 @@ int drop_off(){
                 saatnyaTambahWaktu = false;
                 sisaLokasi = 10;
                 break;
-            case 3:
+            case 'P':
                 printf("Pesanan Perishable Item berhasil diantarkan\n");
                 paid = 400;
                 // ability: increase capacity
@@ -32,8 +33,9 @@ int drop_off(){
             default:
                 break;
         }
+        deleteFirst(&inProgress,&temp);
         balance += paid;
-        printf("Uang yang didapatkan: %d Yen", paid); // tambah balance
+        printf("Uang yang didapatkan: %d Yen\n", paid); // tambah balance
         
     } else {
         printf("Tidak ada pesanan yang dapat diantarkan!\n");

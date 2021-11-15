@@ -7,7 +7,6 @@ void config(char filename[]) {
     POINT point;
     Bangunan building;
     Barang barang;
-    Stack tas;
 
     // Konstruktor
     CreateListDin(&buildings, 27);
@@ -15,6 +14,7 @@ void config(char filename[]) {
     CreateListLinked(&antrian);
     CreateListLS(&boughtGadget); // Inisialisasi inventory
     CreateStack(&tas); // Inisialisasi tas
+    CreateListLinked(&inProgress); //analog dengan tas
     
 
     char filedir[] = "newGames/";

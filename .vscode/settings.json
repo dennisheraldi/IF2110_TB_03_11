@@ -4,6 +4,8 @@
     "stdio.h": "c",
     "list_linked.h": "c",
     "list.h": "c",
-    "wordmachine.h": "c"
+    "wordmachine.h": "c",
+    "config.h": "c",
+    "limits": "c"
   }
 }

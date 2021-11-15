@@ -115,7 +115,7 @@ boolean isListEqualLD(ListDin l1, ListDin l2);
 
 /* ********** SEARCHING ********** */
 /* ***  Perhatian : list boleh kosong!! *** */
-// IdxType indexOfLD(ListDin l, ElType val);
+IdxType indexOfLD(ListDin l, char val);
 /* Search apakah ada elemen List l yang bernilai val */
 /* Jika ada, menghasilkan indeks i terkecil, dengan elemen ke-i = val */
 /* Jika tidak ada, mengirimkan IDX_UNDEF */

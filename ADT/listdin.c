@@ -186,31 +186,31 @@ boolean isFullLD(ListDin l)
 //     return sama;
 // }
 
-// /* ********** SEARCHING ********** */
-// /* ***  Perhatian : list boleh kosong!! *** */
-// IdxType indexOfLD(ListDin l, ElType val)
-// /* Search apakah ada elemen List l yang bernilai val */
-// /* Jika ada, menghasilkan indeks i terkecil, dengan elemen ke-i = val */
-// /* Jika tidak ada, mengirimkan IDX_UNDEF */
-// /* Menghasilkan indeks tak terdefinisi (IDX_UNDEF) jika List l kosong */
-// /* Skema Searching yang digunakan bebas */
-// {
-//     /*KAMUS*/ 
-//     IdxType i;
-//     /*ALGORITMA*/
-//     if (isEmptyLD(l)) {
-//         i = IDX_UNDEF;
-//     } else {// !isEmpty(l)
-//         i = 0;
-//         while (isIdxEffLD(l, i) && ELMTLD(l, i) != val) {
-//             i++;
-//         }
-//         if (!isIdxEffLD(l, i)) {
-//             i = IDX_UNDEF;
-//         }
-//     }
-//     return i;
-// }
+/* ********** SEARCHING ********** */
+/* ***  Perhatian : list boleh kosong!! *** */
+IdxType indexOfLD(ListDin l, char val)
+/* Search apakah ada elemen List l yang bernilai val */
+/* Jika ada, menghasilkan indeks i terkecil, dengan elemen ke-i = val */
+/* Jika tidak ada, mengirimkan IDX_UNDEF */
+/* Menghasilkan indeks tak terdefinisi (IDX_UNDEF) jika List l kosong */
+/* Skema Searching yang digunakan bebas */
+{
+    /*KAMUS*/ 
+    IdxType i;
+    /*ALGORITMA*/
+    if (isEmptyLD(l)) {
+        i = IDX_UNDEF;
+    } else {// !isEmpty(l)
+        i = 0;
+        while (isIdxEffLD(l, i) && NAME(ELMTLD(l, i)) != val) {
+            i++;
+        }
+        if (!isIdxEffLD(l, i)) {
+            i = IDX_UNDEF;
+        }
+    }
+    return i;
+}
 
 // /* ********** NILAI EKSTREM ********** */
 // void extremesLD(ListDin l, ElType *max, ElType *min)

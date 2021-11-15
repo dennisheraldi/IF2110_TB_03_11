@@ -2,6 +2,8 @@
 
 void displayList()
 {
+    // printf("panjang lengthPrio: %d",lengthPrio(antrianPesanan));
+    // printf("panjang antrian: %d",length(antrian));
     int length = lengthPrio(antrianPesanan);
     Address p = FIRST(antrian);
     int count = 0;
@@ -25,5 +27,6 @@ void displayList()
         }
         printf("\n");
         p = NEXT(p);
+        count++;
     }
 }
