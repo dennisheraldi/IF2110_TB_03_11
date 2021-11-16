@@ -32,10 +32,11 @@ int main() {
     printf("Masukkan nama file: ");
         getCommand();
         while (!validateFileName()) {
-            printf("Nama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
+            printf("\nNama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
             printf("Masukkan nama file: ");
             getCommand();
         }
+        printf("\n");
         config();
         while(true){
             printf("Waktu: %d\n", time);
@@ -56,7 +57,7 @@ int main() {
             }else if(isCommandEqual("BUY")){
                 buy();
             }else if(isCommandEqual("INVENTORY")){
-                inventory();
+                // inventory();
             }else if(isCommandEqual("HELP")){
                 help();
             }else if(isCommandEqual("SAVE_GAME")){

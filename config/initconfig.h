@@ -27,7 +27,6 @@
 #include "../lib/MOVE/move.h"
 #include "../lib/PICK_UP/pickup.h"
 #include "../lib/TO_DO/to_do.h"
-#include "../lib/INVENTORY/inventory.h"
 #include "../lib/HELP/help.h"
 
 
