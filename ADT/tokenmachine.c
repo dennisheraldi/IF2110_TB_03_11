@@ -25,20 +25,24 @@ void ignoreBlank()
    }
 }
 
-void startToken(boolean file, char filename[])
+boolean startToken(boolean file, char filename[])
 /* I.S. : currentChar sembarang 
    F.S. : endToken = true, dan currentChar = MARK; 
           atau endToken = false, currentToken adalah Token yang sudah diakuisisi,
           currentChar karakter pertama sesudah karakter terakhir Token */
 {
-    start(file, filename);
-    ignoreBlank();
-    if (currentChar == MARK) {
-        endToken = true;
-    } else {
-        endToken = false;
-        salinToken();
+    boolean ret;
+    ret = start(file, filename);
+    if (ret) {
+        ignoreBlank();
+        if (currentChar == MARK) {
+            endToken = true;
+        } else {
+            endToken = false;
+            salinToken();
+        }
     }
+    return ret;
 }
 
 void advToken()

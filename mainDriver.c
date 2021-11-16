@@ -1,5 +1,5 @@
 #include "config/config.h"
-#include "lib/commandParser/commandParser.h"
+#include "config/initconfig.h"
 
 int time;
 int balance;
@@ -21,7 +21,6 @@ List boughtGadget;
 ListLinked antrian;
 
 int main() {
-    config("game1.txt");
     printf("MENU UTAMA\n");
     printf("Tentukan aksi yang mau dilakukan!\n");
     printf("- NEW GAME\n");
@@ -30,11 +29,15 @@ int main() {
     printf("Masukkan pilihan aksi: ");
     getCommand();
     if (isCommandEqual("NEW GAME")) {
-        printf("NEW GAME\n");
-        //displayMatrix(adjacency);
-        // printf("\n");
-        // displayMatrix(map);
         while(true){
+            printf("Masukkan nama file: ");
+            getCommand();
+            while (!validateFileName()) {
+                printf("Nama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
+                printf("Masukkan nama file: ");
+                getCommand();
+            }
+            config();
             printf("Waktu: %d\n", time);
             printf("ENTER COMMAND: ");
             getCommand();
@@ -43,7 +46,7 @@ int main() {
             }else if(isCommandEqual("PICK_UP")){
                 pickup();
             }else if(isCommandEqual("DROP_OFF")){
-                drop_off();
+                // drop_off();
             }else if(isCommandEqual("MAP")){
                 displayMap();
             }else if(isCommandEqual("TO_DO")){

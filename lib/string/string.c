@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "../../ADT/wordmachine.h"
+#include "../../config/config.h"
 #include "../../config/initconfig.h"
 
 Word concatenate(Word w1, Word w2) {
@@ -16,10 +15,47 @@ Word concatenate(Word w1, Word w2) {
     return w;
 }
 
-void wordToString(Word w, char * str) {
+Word commandToWord() {
+    Word w;
+    int i;
+    for (i = 0; i < commandLen; i++) {
+        w.contents[i] = command[i];
+    }
+    w.length = commandLen;
+    return w;
+}
+
+void wordToString(Word w, char str[]) {
     int i;
     for (i = 0; i < w.length; i++) {
         str[i] = w.contents[i];
     }
     str[w.length] = '\0';
+}
+
+boolean validateFileName() {
+    Word inputName, dir, fileName;
+    dir.contents[0] = 'n';
+    dir.contents[1] = 'e';
+    dir.contents[2] = 'w';
+    dir.contents[3] = 'G';
+    dir.contents[4] = 'a';
+    dir.contents[5] = 'm';
+    dir.contents[6] = 'e';
+    dir.contents[7] = 's';
+    dir.contents[8] = '/';
+    dir.length = 9;
+    inputName = commandToWord();
+    char str[inputName.length + dir.length + 10];
+    fileName = concatenate(dir, inputName);
+    wordToString(fileName, str);
+    return startToken(true, str);
+}
+
+void printWord(Word w) {
+    int i;
+    for (i = 0; i < w.length; i++) {
+        printf("%c", w.contents[i]);
+    }
+    printf("\n");
 }

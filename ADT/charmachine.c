@@ -13,7 +13,7 @@ static FILE * tape;
 static int retval;
 
 
-void start(boolean file, char filename[]) {
+boolean start(boolean file, char filename[]) {
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang
@@ -28,7 +28,12 @@ void start(boolean file, char filename[]) {
        } else {
 	       tape = stdin;
        }
-	adv();
+
+       if (!withFile || tape != NULL) {
+	       adv();
+       }
+       
+       return !withFile || tape != NULL;
 }
 
 void adv() {

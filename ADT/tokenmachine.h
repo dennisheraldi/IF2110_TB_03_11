@@ -25,7 +25,7 @@ void ignoreBlank();
    I.S. : currentChar sembarang 
    F.S. : currentChar ≠ BLANK atau currentChar = MARK */
 
-void startToken(boolean file, char filename[]);
+boolean startToken(boolean file, char filename[]);
 /* I.S. : currentChar sembarang 
    F.S. : endToken = true, dan currentChar = MARK; 
           atau endToken = false, currentToken adalah Token yang sudah diakuisisi,

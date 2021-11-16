@@ -1,4 +1,5 @@
-#include "../../config/initconfig.h"
+// #include "../../config/initconfig.h"
+#include "commandParser.h"
 
 boolean isCommandEqual(char input[]) {
     boolean equal;
@@ -20,7 +21,7 @@ void getCommand() {
     int i;
     i = 0;
     start(false, "x");
-    while (!eot && i < 50)
+    while (!eot && i < 20)
     {
         command[i] = currentChar;
         i++;

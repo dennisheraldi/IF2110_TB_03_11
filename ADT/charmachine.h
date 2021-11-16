@@ -12,7 +12,7 @@ extern char currentChar;
 extern boolean eot;
 extern boolean withFile;
 
-void start(boolean file, char filename[]);
+boolean start(boolean file, char filename[]);
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang

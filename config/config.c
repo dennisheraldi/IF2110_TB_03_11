@@ -1,7 +1,8 @@
 #include "initconfig.h"
+#include "config.h"
 #include "../ADT/list.h"
 
-void config(char filename[]) {
+void config() {
     int row, col, i, j, counter, val;
     char c;
     POINT point;
@@ -21,9 +22,9 @@ void config(char filename[]) {
     time = 0;
     balance = 0;
 
-    strcat(filedir, filename);
+    // strcat(filedir, filename);
 
-    startToken(true, filedir);
+    // startToken(true, filedir);
     row = currentToken.val;
     advToken();
     col = currentToken.val;

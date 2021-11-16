@@ -1,1 +1,1 @@
-void config(char filename[]);
+void config();
