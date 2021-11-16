@@ -20,13 +20,15 @@
 #include "../ADT/wordmachine.h"
 #include "../ADT/tokenmachine.h"
 #include "../lib/commandParser/commandParser.h"
-#include "../lib/string/string.h"
+#include "../lib/STRING_PROCESSOR/string_processor.h"
 #include "../lib/BUY/buy.h"
 #include "../lib/DROP_OFF/drop_off.h"
 #include "../lib/MAP/map.h"
 #include "../lib/MOVE/move.h"
 #include "../lib/PICK_UP/pickup.h"
 #include "../lib/TO_DO/to_do.h"
+#include "../lib/HELP/help.h"
+
 
 extern int time;
 extern int balance;
@@ -46,5 +48,6 @@ extern boolean saatnyaTambahWaktu;
 extern boolean isSpeedBoostActive;
 extern int sisaLokasi;
 extern ListLinked inProgress;
+
 
 #endif

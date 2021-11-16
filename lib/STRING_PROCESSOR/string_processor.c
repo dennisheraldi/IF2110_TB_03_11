@@ -1,5 +1,4 @@
-#include "../../config/config.h"
-#include "../../config/initconfig.h"
+#include "string_processor.h"
 
 Word concatenate(Word w1, Word w2) {
     Word w;
@@ -58,4 +57,58 @@ void printWord(Word w) {
         printf("%c", w.contents[i]);
     }
     printf("\n");
+}
+
+void printStringRed(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_red(str[i]);
+        i++;
+    }
+}
+
+void printStringGreen(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_green(str[i]);
+        i++;
+    }
+}
+
+void printStringYellow(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_yellow(str[i]);
+        i++;
+    }
+}
+
+void printStringBlue(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_blue(str[i]);
+        i++;
+    }
+}
+
+void printStringMagenta(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_magenta(str[i]);
+        i++;
+    }
+}
+
+void printStringCyan(char str[]) {
+    int i;
+    i = 0;
+    while (str[i] != '\0') {
+        print_cyan(str[i]);
+        i++;
+    }
 }
