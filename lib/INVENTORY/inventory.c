@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "../../config/initconfig.h"
 
 void inventory() {
