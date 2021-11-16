@@ -13,12 +13,18 @@ void displayInProgress() {
   while (p != NULL) {
     printf("%d. ", count);
     // Mengecek tipe barang
-    if (TYPE(INFO(p)) == 'N') {
-      printf("Normal Item ");
-    } else if (TYPE(INFO(p)) == 'H') {
-      printf("Heavy Item ");
-    } else if (TYPE(INFO(p)) == 'P') {
-      printf("Perishable Item ");
+    switch (TYPE(INFO(p))) {
+      case 'N':
+        printf("Normal Item ");
+        break;
+      case 'H':
+        printf("Heavy Item ");
+        break;
+      case 'P':
+        printf("Perishable Item ");
+        break;
+      default:
+        break;
     }
 
     // Menampilkan drop-off location
