@@ -27,6 +27,9 @@
 #include "../lib/MOVE/move.h"
 #include "../lib/PICK_UP/pickup.h"
 #include "../lib/TO_DO/to_do.h"
+#include "../lib/INVENTORY/inventory.h"
+#include "../lib/HELP/help.h"
+
 
 extern int time;
 extern int balance;
@@ -46,5 +49,6 @@ extern boolean saatnyaTambahWaktu;
 extern boolean isSpeedBoostActive;
 extern int sisaLokasi;
 extern ListLinked inProgress;
+
 
 #endif

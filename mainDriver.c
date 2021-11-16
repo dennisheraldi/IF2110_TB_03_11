@@ -56,9 +56,9 @@ int main() {
             }else if(isCommandEqual("BUY")){
                 buy();
             }else if(isCommandEqual("INVENTORY")){
-                
+                inventory();
             }else if(isCommandEqual("HELP")){
-                
+                help();
             }else if(isCommandEqual("SAVE_GAME")){
                 
             }else if(isCommandEqual("RETURN")){
