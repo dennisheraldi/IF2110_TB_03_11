@@ -10,14 +10,21 @@ void inventory() {
     if (isEmptyLS(boughtGadget)) { // Jika boughtGadget kosong, artinya kelima slot inventory kosong
       printf("-");
     } else { // boughtGadget tidak kosong, maka tampilkan isi list 
-      if (ELMTLS(boughtGadget, i) == 1) {
-        printf("Kain Pembungkus Waktu");
-      } else if (ELMTLS(boughtGadget, i) == 2) {
-        printf("Senter Pembesar");
-      } else if (ELMTLS(boughtGadget, i) == 3) {
-        printf("Pintu Kemana Saja");
-      } else { // ELMTLS(boughtGadget, i) == 4
-        printf("Mesin Waktu");
+      switch (ELMTLS(boughtGadget, i)) {
+        case 1:
+          printf("Kain Pembungkus Waktu");
+          break;
+        case 2:
+          printf("Senter Pembesar");
+          break;
+        case 3:
+          printf("Pintu Kemana Saja");
+          break;
+        case 4:
+          printf("Mesin Waktu");
+          break;
+        default:
+          break;
       }
     }
     printf("\n");
@@ -31,15 +38,22 @@ void inventory() {
   if (isEmptyLS(boughtGadget)) { // Kasus boughtGadget kosong
     printf("Inventory kosong. Tidak ada gadget yang dapat digunakan.");
   } else {
-    if (pilihan == 1) {
-      printf("Kain Pembungkus Waktu");
-    } else if (pilihan == 2) {
-      printf("Senter Pembesar");
-    } else if (pilihan == 3) {
-      printf("Pintu Kemana Saja");
-    } else { // pilihan == 4
-      printf("Mesin Waktu");
-    }
+      switch (pilihan) {
+        case 1:
+          printf("Kain Pembungkus Waktu");
+          break;
+        case 2:
+          printf("Senter Pembesar");
+          break;
+        case 3:
+          printf("Pintu Kemana Saja");
+          break;
+        case 4:
+          printf("Mesin Waktu");
+          break;
+        default:
+          break;
+      }
     printf(" berhasil digunakan!\n");
   }
 }
