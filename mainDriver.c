@@ -17,7 +17,7 @@ boolean saatnyaTambahWaktu;
 boolean isSpeedBoostActive;
 int sisaLokasi;
 ListLinked inProgress;
-List gadget;
+List boughtGadget;
 ListLinked antrian;
 
 int main() {
