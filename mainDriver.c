@@ -29,15 +29,15 @@ int main() {
     printf("Masukkan pilihan aksi: ");
     getCommand();
     if (isCommandEqual("NEW GAME")) {
-        while(true){
+    printf("Masukkan nama file: ");
+        getCommand();
+        while (!validateFileName()) {
+            printf("Nama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
             printf("Masukkan nama file: ");
             getCommand();
-            while (!validateFileName()) {
-                printf("Nama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
-                printf("Masukkan nama file: ");
-                getCommand();
-            }
-            config();
+        }
+        config();
+        while(true){
             printf("Waktu: %d\n", time);
             printf("ENTER COMMAND: ");
             getCommand();
@@ -46,7 +46,7 @@ int main() {
             }else if(isCommandEqual("PICK_UP")){
                 pickup();
             }else if(isCommandEqual("DROP_OFF")){
-                // drop_off();
+                drop_off();
             }else if(isCommandEqual("MAP")){
                 displayMap();
             }else if(isCommandEqual("TO_DO")){

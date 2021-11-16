@@ -1,6 +1,21 @@
 #include <stdio.h>
 #include "../../config/initconfig.h"
 
+void hapusDariAntrian(Barang b){
+    Barang temp;
+    int i=0;
+    int panjang=length(antrian);
+    boolean found=false;
+    while((i<panjang) && (!found)){
+        if(EQBarang(getElmt(antrian,i),b)){
+            found=true;
+            deleteAt(&antrian,i,&temp);
+        }else{
+            i++;
+        }
+    }
+}
+
 void pickup(){
     Barang temp;
     int indeks;
@@ -27,6 +42,7 @@ void pickup(){
                     saatnyaTambahWaktu=false;
                 }
                 printf("Tujuan Pesanan: %c\n", DROPOFF_LOC(temp));
+                hapusDariAntrian(temp);
             }
         }
     }else{

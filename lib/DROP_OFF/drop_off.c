@@ -10,7 +10,7 @@ int drop_off(){
     // Syarat pengantaran barang adalah barang harus diantar pada lokasi yang sesuai
     if (DROPOFF_LOC(TOP(tas)) == NAME(currentPosition)){ 
         pop(&tas, &temp); 
-        printf("%c",TYPE(temp));
+        //printf("%c",TYPE(temp));
         switch(TYPE(temp)){
             case 'N':
                 printf("Pesanan Normal Item berhasil diantarkan\n");

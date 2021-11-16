@@ -1,3 +1,4 @@
+#include "boolean.h"
 
 #ifndef BARANG_H
 #define BARANG_H
@@ -17,5 +18,7 @@ typedef struct{
 #define DROPOFF_LOC(b) (b).lokasi_dropoff
 #define TYPE(b) (b).jenis_barang
 #define EXP_TIME(b) (b).waktu_expired
+
+boolean EQBarang(Barang a, Barang b);
 
 #endif
