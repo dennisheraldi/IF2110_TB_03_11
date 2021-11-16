@@ -19,6 +19,7 @@ int drop_off(){
             case 'H':
                 printf("Pesanan Heavy Item berhasil diantarkan\n");
                 paid = 400; 
+                jumlahHeavyDiTas--;
                 // ability: speed boost
                 isSpeedBoostActive = true;
                 saatnyaTambahWaktu = false;

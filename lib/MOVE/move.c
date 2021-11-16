@@ -121,6 +121,7 @@ void move()
             counter++;
         }
     }
+    counter--;
     //meminta input lokasi mana yang ingin dikunjungi
     printf("Posisi yang dipilih? (ketik 0 jika ingin kembali)\n");
     do
