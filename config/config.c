@@ -1,6 +1,6 @@
 #include "initconfig.h"
 #include "config.h"
-#include "../ADT/list.h"
+
 
 void config() {
     int row, col, i, j, counter, val;
