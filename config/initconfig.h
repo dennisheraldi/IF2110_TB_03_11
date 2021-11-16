@@ -20,7 +20,7 @@
 #include "../ADT/wordmachine.h"
 #include "../ADT/tokenmachine.h"
 #include "../lib/commandParser/commandParser.h"
-#include "../lib/string/string.h"
+#include "../lib/STRING_PROCESSOR/string_processor.h"
 #include "../lib/BUY/buy.h"
 #include "../lib/DROP_OFF/drop_off.h"
 #include "../lib/MAP/map.h"

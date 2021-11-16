@@ -32,7 +32,7 @@ int main() {
     printf("Masukkan nama file: ");
         getCommand();
         while (!validateFileName()) {
-            printf("\nNama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
+            printStringRed("\nNama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
             printf("Masukkan nama file: ");
             getCommand();
         }
