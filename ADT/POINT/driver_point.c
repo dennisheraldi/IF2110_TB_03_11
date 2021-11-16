@@ -2,7 +2,7 @@
 /* *** Driver ABSTRACT DATA TYPE POINT *** */
 
 #include <stdio.h>
-#include "point.c"
+#include "point.h"
 
 int main () {
     /* KAMUS */
