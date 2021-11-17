@@ -20,6 +20,7 @@ void config() {
 
     char filedir[] = "newGames/";
     time = 0;
+    time2 = 0;
     balance = 0;
 
     // strcat(filedir, filename);

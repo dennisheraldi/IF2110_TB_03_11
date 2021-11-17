@@ -9,12 +9,13 @@ void tambahWaktu()
     if (jumlahHeavyDiTas > 0)
     {
         time += (1 + jumlahHeavyDiTas);
+        time2 += (1 + jumlahHeavyDiTas);
     }
     else if (isSpeedBoostActive)
     {
         if (saatnyaTambahWaktu)
         {
-            time++;
+            time++; time2++;
             sisaLokasi--;
             saatnyaTambahWaktu = false;
         }
@@ -32,7 +33,7 @@ void tambahWaktu()
     }
     else
     {
-        time++;
+        time++; time2++;
     }
     //cek apakah ada perishable items yang hangus
     i = 0;

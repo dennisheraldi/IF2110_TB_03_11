@@ -81,6 +81,11 @@ void inventory() {
             deleteElmt(&boughtGadget, (input-1));
             break;
           case 4:
+            if (time2 > 50) {
+              time2 = time2-50;
+            } else {
+              time2 = 0;
+            }
             printf("Mesin Waktu berhasil digunakan!\n");
             deleteElmt(&boughtGadget, (input-1));
             break;

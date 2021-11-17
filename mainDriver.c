@@ -3,6 +3,7 @@
 #include "config/initconfig.h"
 
 int time;
+int time2;
 int balance;
 Stack tas;
 Matrix map;
@@ -42,7 +43,7 @@ int main() {
         config();
         config_save();
         while(true){
-            printf("Waktu: %d\n", time);
+            printf("Waktu: %d\n", time2);
             printf("ENTER COMMAND: ");
             getCommand();
             if(isCommandEqual("MOVE")){

@@ -33,6 +33,7 @@
 
 
 extern int time;
+extern int time2;
 extern int balance;
 extern Stack tas;
 extern Matrix adjacency;
