@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "../ADT/BOOLEAN/boolean.h"
+#include "../ADT/boolean.h"
 #include "../ADT/BANGUNAN/bangunan.h"
 #include "../ADT/QUEUE/queue.h"
 #include "../ADT/STACK/stack.h"
@@ -28,6 +28,8 @@
 #include "../lib/PICK_UP/pickup.h"
 #include "../lib/TO_DO/to_do.h"
 #include "../lib/HELP/help.h"
+#include "../lib/IN_PROGRESS/in_progress.h"
+#include "../lib/INVENTORY/inventory.h"
 
 
 extern int time;

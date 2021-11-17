@@ -7,8 +7,8 @@
 #ifndef LISTDIN_H
 #define LISTDIN_H
 
-#include "boolean.h"
-#include "bangunan.h"
+#include "../boolean.h"
+#include "../BANGUNAN/bangunan.h"
 
 
 /*  Kamus Umum */

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "wordmachine.h"
-#include "charmachine.h"
+#include "../CHARMACHINE/charmachine.h"
 
 /*
 Nama: David Karel Halomoan

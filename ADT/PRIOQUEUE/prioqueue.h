@@ -5,8 +5,8 @@
 #ifndef PRIOQUEUE_H
 #define PRIOQUEUE_H
 
-#include "boolean.h"
-#include "barang.h"
+#include "../boolean.h"
+#include "../BARANG/barang.h"
 
 /* Konstanta */
 #define IDX_UNDEF -1

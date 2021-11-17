@@ -5,8 +5,8 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include "boolean.h"
-#include "barang.h"
+#include "../boolean.h"
+#include "../BARANG/barang.h"
 
 #define IDX_UNDEF -1
 #define STACKCAPACITY 100

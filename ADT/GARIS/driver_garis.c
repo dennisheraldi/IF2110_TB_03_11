@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include "garis.h"
-#include "point.h"
+#include "../POINT/point.h"
 
 int main() {
     /* KAMUS */

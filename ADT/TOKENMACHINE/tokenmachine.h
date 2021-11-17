@@ -4,8 +4,8 @@
 #ifndef TOKEN_MACHINE_H
 #define TOKEN_MACHINE_H
 
-#include "boolean.h"
-#include "charmachine.h"
+#include "../boolean.h"
+#include "../CHARMACHINE/charmachine.h"
 
 #define TOKENCAPACITY 100
 #define BLANK ' '

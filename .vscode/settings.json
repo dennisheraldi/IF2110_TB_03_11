@@ -1,11 +1,16 @@
 {
   "files.associations": {
+    "*.pl": "prolog",
     "initconfig.h": "c",
     "stdio.h": "c",
     "list_linked.h": "c",
     "list.h": "c",
     "wordmachine.h": "c",
     "config.h": "c",
-    "limits": "c"
+    "limits": "c",
+    "point.h": "c",
+    "boolean.h": "c",
+    "barang.h": "c",
+    "charmachine.h": "c"
   }
 }

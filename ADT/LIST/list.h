@@ -7,7 +7,7 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include "boolean.h"
+#include "../boolean.h"
 
 /*  Kamus Umum */
 #define LISTCAPACITY 5 //kapasitas untuk inventory pembelian gadget

@@ -1,4 +1,4 @@
-#include "boolean.h"
+#include "../boolean.h"
 
 #ifndef BARANG_H
 #define BARANG_H

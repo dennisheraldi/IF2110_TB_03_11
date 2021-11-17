@@ -53,11 +53,11 @@ int main() {
             }else if(isCommandEqual("TO_DO")){
                 displayList();
             }else if(isCommandEqual("IN_PROGRESS")){
-
+                displayInProgress();
             }else if(isCommandEqual("BUY")){
                 buy();
             }else if(isCommandEqual("INVENTORY")){
-                // inventory();
+                inventory();
             }else if(isCommandEqual("HELP")){
                 help();
             }else if(isCommandEqual("SAVE_GAME")){

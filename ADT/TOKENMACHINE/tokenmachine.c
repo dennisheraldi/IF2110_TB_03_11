@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "charmachine.h"
+#include "../CHARMACHINE/charmachine.h"
 #include "tokenmachine.h"
 
 /*

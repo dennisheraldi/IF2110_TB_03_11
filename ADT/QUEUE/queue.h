@@ -4,8 +4,8 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include "boolean.h"
-#include "barang.h"
+#include "../boolean.h"
+#include "../BARANG/barang.h"
 
 #define IDX_UNDEF -1
 #define QUEUECAPACITY 30

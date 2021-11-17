@@ -6,7 +6,7 @@
 #ifndef LISTLINKED_H
 #define LISTLINKED_H
 
-#include "boolean.h"
+#include "../boolean.h"
 #include "node.h"
 
 typedef Address ListLinked;

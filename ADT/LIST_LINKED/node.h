@@ -2,7 +2,7 @@
 #define NODE_H
 
 #include <stdlib.h>
-#include "barang.h"
+#include "../BARANG/barang.h"
 
 typedef int ElType;
 typedef struct node* Address;

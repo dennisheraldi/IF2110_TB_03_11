@@ -4,8 +4,8 @@
 #ifndef WORD_ENGINE_H
 #define WORD_ENGINE_H
 
-#include "boolean.h"
-#include "charmachine.h"
+#include "../boolean.h"
+#include "../CHARMACHINE/charmachine.h"
 
 #define WORDCAPACITY 50
 #define BLANK ' '

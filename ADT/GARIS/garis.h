@@ -5,8 +5,8 @@
 #define GARIS_H
 
 /* *** ADT LAIN YANG DIPAKAI *** */
-#include "boolean.h"
-#include "point.h"
+#include "../boolean.h"
+#include "../POINT/point.h"
 
 /* *** Definisi TYPE GARIS *** */
 typedef struct {

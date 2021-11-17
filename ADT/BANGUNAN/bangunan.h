@@ -1,13 +1,11 @@
 /* File: bangunan.h */
 /* Definisi ADT Bangunan */
 
-
-
 #ifndef BANGUNAN_H
 #define BANGUNAN_H
 
-#include "point.h"
-#include "queue.h"
+#include "../POINT/point.h"
+#include "../QUEUE/queue.h"
 
 typedef struct {
     char name; //Nama dipastikan satu karakter
