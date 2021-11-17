@@ -2,7 +2,7 @@
 #include "../../config/initconfig.h"
 
 void inventory() {
-  int i,input, checkJenis;
+  int i,input, checkJenis,kapasitasTas;
   boolean valid;
   
   // Menampilkan isi inventory
@@ -54,22 +54,41 @@ void inventory() {
         checkJenis = ELMTLS(boughtGadget,(input-1));
         switch (checkJenis) {
           case 1:
-            printf("Kain Pembungkus Waktu");
+            if (TYPE(TOP(tas)) == 'P') {
+              printf("Kain Pembungkus Waktu berhasil digunakan!\n");
+              PICKUP_TIME(TOP(tas)) = time;
+              deleteElmt(&boughtGadget, (input-1));
+            } else {
+              printf("Kain Pembungkus Waktu tidak dapat digunakan!\n");
+            }
             break;
           case 2:
-            printf("Senter Pembesar");
+            kapasitasTas = NEFFQ(tas);
+            
+            if (2*kapasitasTas <= STACKCAPACITY){
+              NEFFQ(tas) = 2*kapasitasTas;
+              printf("Senter Pembesar berhasil digunakan!\n");
+            } else {
+              NEFFQ(tas) = STACKCAPACITY;
+            }
+            deleteElmt(&boughtGadget, (input-1));
+            printf("Kapasitas tas sebelum: %d\n", kapasitasTas);
+            printf("Kapasitas tas sesudah: %d\n", NEFFQ(tas));
             break;
           case 3:
-            printf("Pintu Kemana Saja");
+            pintuKemanaSaja = true;
+            printf("Pintu Kemana Saja berhasil digunakan!\n");
+            deleteElmt(&boughtGadget, (input-1));
             break;
           case 4:
-            printf("Mesin Waktu");
+            printf("Mesin Waktu berhasil digunakan!\n");
+            deleteElmt(&boughtGadget, (input-1));
             break;
+          case -999:
+            printf("Tidak ada gadget yang dapat digunakan pada slot ini!\n");
           default:
             break;
         }
-      deleteElmt(&boughtGadget, (input-1));
-      printf(" berhasil digunakan!\n");
     }
   }
 

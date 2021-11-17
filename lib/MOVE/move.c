@@ -27,6 +27,8 @@ void tambahWaktu()
         {
             isSpeedBoostActive = false;
         }
+    } else if (pintuKemanaSaja) {
+        pintuKemanaSaja = false;
     }
     else
     {

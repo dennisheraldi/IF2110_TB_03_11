@@ -48,6 +48,7 @@ extern int commandLen;
 extern int jumlahHeavyDiTas;
 extern boolean saatnyaTambahWaktu;
 extern boolean isSpeedBoostActive;
+extern boolean pintuKemanaSaja;
 extern int sisaLokasi;
 extern ListLinked inProgress;
 

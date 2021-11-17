@@ -16,6 +16,7 @@ PrioQueue antrianPesanan;
 int jumlahHeavyDiTas;
 boolean saatnyaTambahWaktu;
 boolean isSpeedBoostActive;
+boolean pintuKemanaSaja;
 int sisaLokasi;
 ListLinked inProgress;
 List boughtGadget;
