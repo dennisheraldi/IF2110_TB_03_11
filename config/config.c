@@ -104,6 +104,6 @@ void config() {
             EXP_TIME(barang) = currentToken.val;
         }
         enqueuePrio(&antrianPesanan, barang);
-        insertLast(&savedBarang,barang);
+        // insertLast(&savedBarang,barang);
     }
 }
