@@ -18,16 +18,20 @@ void return_to_sender() {
                 idx = indexOfLD(buildings, loc);
                 bangunan = ELMTLD(buildings, idx);
                 q = ANTREAN(bangunan);
-                if (IDX_HEAD(q) == 0) {
-                    n = lengthQ(q);
-                    for (i = n; i > 0; i++) {
-                        q.buffer[i] = q.buffer[i - 1];
-                    }
-                    q.buffer[0] = barang;
-                    IDX_TAIL(q)++;
+                if (isEmptyQ(q)) {
+                    enqueue(&q, barang);
                 } else {
-                    IDX_HEAD(q)--;
-                    HEAD(q) = barang;
+                    if (IDX_HEAD(q) == 0) {
+                        n = lengthQ(q);
+                        for (i = n; i > 0; i++) {
+                            q.buffer[i] = q.buffer[i - 1];
+                        }
+                        q.buffer[0] = barang;
+                        IDX_TAIL(q)++;
+                    } else {
+                        IDX_HEAD(q)--;
+                        HEAD(q) = barang;
+                    }
                 }
                 printf("\nItem teratas pada tas dikembalikan ke tempat semula!\n\n");
             } else {
