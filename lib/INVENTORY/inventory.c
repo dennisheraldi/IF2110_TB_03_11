@@ -2,7 +2,7 @@
 #include "../../config/initconfig.h"
 
 void inventory() {
-  int i,input, checkJenis,kapasitasTas;
+  int i, input, checkJenis, kapasitasTas;
   boolean valid;
   
   // Menampilkan isi inventory
@@ -44,15 +44,15 @@ void inventory() {
       getCommand();
       input = command[0] - '0';
       valid = ((0 <= input) && (input <= 5));
-      if (!valid)
-      {
+      if (!valid) {
           printf("Input tidak valid !\n");
       }
   } while (!valid);
 
-  if (input!=0){
+  // Menampilkan pesan mengenai gadget yang digunakan
+  if (input != 0) {
     if (isEmptyLS(boughtGadget)) { // Kasus boughtGadget kosong
-      printf("Inventory kosong. Tidak ada gadget yang dapat digunakan.\n");
+      printf("Inventory kosong. Tidak ada gadget yang dapat digunakan!\n");
     } else {
         checkJenis = ELMTLS(boughtGadget,(input-1));
         switch (checkJenis) {
@@ -68,35 +68,35 @@ void inventory() {
           case 2:
             kapasitasTas = NEFFQ(tas);
             
-            if (2*kapasitasTas <= STACKCAPACITY){
-              NEFFQ(tas) = 2*kapasitasTas;
+            if ((2 * kapasitasTas) <= STACKCAPACITY) {
+              NEFFQ(tas) = 2 * kapasitasTas;
               printf("Senter Pembesar berhasil digunakan!\n");
             } else {
               NEFFQ(tas) = STACKCAPACITY;
             }
-            deleteElmt(&boughtGadget, (input-1));
+            deleteElmt(&boughtGadget, (input - 1));
             printf("Kapasitas tas sebelum: %d\n", kapasitasTas);
             printf("Kapasitas tas sesudah: %d\n", NEFFQ(tas));
             break;
           case 3:
             pintuKemanaSaja = true;
             printf("Pintu Kemana Saja berhasil digunakan!\n");
-            deleteElmt(&boughtGadget, (input-1));
+            deleteElmt(&boughtGadget, (input - 1));
             break;
           case 4:
             if (time2 > 50) {
-              time2 = time2-50;
+              time2 = time2 - 50;
             } else {
               time2 = 0;
             }
             printf("Mesin Waktu berhasil digunakan!\n");
-            deleteElmt(&boughtGadget, (input-1));
+            deleteElmt(&boughtGadget, (input - 1));
             break;
           case 5:
-            if (TYPE(TOP(tas)) == 'H'){
+            if (TYPE(TOP(tas)) == 'H') {
               senterPengecil = true;
               printf("Senter Pembesar berhasil digunakan!\n");
-              deleteElmt(&boughtGadget, (input-1));
+              deleteElmt(&boughtGadget, (input - 1));
             } else {
               printf("Senter Pembesar tidak dapat digunakan!\n");
             }
@@ -108,7 +108,4 @@ void inventory() {
         }
     }
   }
-
-  // Menampilkan pesan mengenai gadget yang digunakan
-  
 }
