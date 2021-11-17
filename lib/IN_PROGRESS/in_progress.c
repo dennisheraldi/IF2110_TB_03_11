@@ -23,6 +23,9 @@ void displayInProgress() {
       case 'P':
         printf("Perishable Item ");
         break;
+      case 'V':
+        printf("VIP Item ");
+        break;
       default:
         break;
     }

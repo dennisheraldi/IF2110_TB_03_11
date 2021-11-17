@@ -26,7 +26,11 @@ void displayList()
             }
             else if (TYPE(temp) == 'P')
             {
-                printf("(Perishable Item)");
+                printf("(Perishable Item, sisa waktu %d)", EXP_TIME(temp));
+            }
+            else if (TYPE(temp) == 'V')
+            {
+                printf("(VIP Item)");
             }
             printf("\n");
             p = NEXT(p);
