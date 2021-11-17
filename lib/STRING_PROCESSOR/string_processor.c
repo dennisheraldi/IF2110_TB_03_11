@@ -34,16 +34,17 @@ void wordToString(Word w, char str[]) {
 
 boolean validateFileName() {
     Word inputName, dir, fileName;
-    dir.contents[0] = 'n';
-    dir.contents[1] = 'e';
-    dir.contents[2] = 'w';
-    dir.contents[3] = 'G';
-    dir.contents[4] = 'a';
-    dir.contents[5] = 'm';
-    dir.contents[6] = 'e';
-    dir.contents[7] = 's';
-    dir.contents[8] = '/';
-    dir.length = 9;
+    dir.contents[0] = 'N';
+    dir.contents[1] = 'E';
+    dir.contents[2] = 'W';
+    dir.contents[3] = '_';
+    dir.contents[4] = 'G';
+    dir.contents[5] = 'A';
+    dir.contents[6] = 'M';
+    dir.contents[7] = 'E';
+    dir.contents[8] = 'S';
+    dir.contents[9] = '/';
+    dir.length = 10;
     inputName = commandToWord();
     char str[inputName.length + dir.length + 10];
     fileName = concatenate(dir, inputName);
