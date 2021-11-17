@@ -19,7 +19,7 @@
 #include "../ADT/PCOLOR/pcolor.h"
 #include "../ADT/WORDMACHINE/wordmachine.h"
 #include "../ADT/TOKENMACHINE/tokenmachine.h"
-#include "../lib/commandParser/commandParser.h"
+#include "../lib/COMMAND_PARSER/commandParser.h"
 #include "../lib/STRING_PROCESSOR/string_processor.h"
 #include "../lib/BUY/buy.h"
 #include "../lib/DROP_OFF/drop_off.h"
