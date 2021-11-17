@@ -19,6 +19,7 @@ int jumlahHeavyDiTas;
 boolean saatnyaTambahWaktu;
 boolean isSpeedBoostActive;
 boolean pintuKemanaSaja;
+boolean senterPengecil;
 int sisaLokasi;
 ListLinked inProgress;
 List boughtGadget;

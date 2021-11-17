@@ -53,6 +53,7 @@ extern int jumlahHeavyDiTas;
 extern boolean saatnyaTambahWaktu;
 extern boolean isSpeedBoostActive;
 extern boolean pintuKemanaSaja;
+extern boolean senterPengecil;
 extern int sisaLokasi;
 extern ListLinked inProgress;
 extern ListLinked savedBarang;

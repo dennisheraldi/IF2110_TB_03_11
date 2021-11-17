@@ -9,6 +9,9 @@ void return_to_sender() {
     if (returnCounter > 0) {
         if (TYPE(TOP(tas)) != 'V') {
             if (!isEmptyS(tas)) {
+                if (senterPengecil){
+                    senterPengecil = false;
+                }
                 returnCounter--;
                 pop(&tas, &barang);
                 insertLast(&antrian, barang);

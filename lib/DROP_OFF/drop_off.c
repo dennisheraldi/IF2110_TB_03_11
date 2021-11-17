@@ -20,6 +20,9 @@ int drop_off(){
                 printf("Pesanan Heavy Item berhasil diantarkan\n");
                 paid = 400; 
                 jumlahHeavyDiTas--;
+                if (senterPengecil) {
+                    senterPengecil = false;
+                }
                 // ability: speed boost
                 isSpeedBoostActive = true;
                 saatnyaTambahWaktu = false;

@@ -13,12 +13,13 @@ void buy(){
         printf("2. Senter Pembesar (1200 Yen)\n");
         printf("3. Pintu Kemana Saja (1500 Yen)\n");
         printf("4. Mesin Waktu (3000 Yen)\n");
+        printf("5. Senter Pengecil (800 Yen)\n");
         printf("Gadget mana yang ingin kau beli? (ketik 0 jika ingin kembali)\n");
         do {
             printf("ENTER COMMAND: ");
             getCommand();
             input = command[0] - '0';
-            valid = ((0 <= input) && (input <= 4));
+            valid = ((0 <= input) && (input <= 5));
             if (!valid)
             {
                 printf("Input tidak valid !\n");
@@ -30,8 +31,9 @@ void buy(){
             } else {
                 if (input == 0){
                     // keluar
-                } else if ((input == 1 && balance >= 800) || (input == 2 && balance >= 1200) ||
-                (input == 3 && balance >= 1500) || (input == 4 && balance >= 3000)) {
+                } else if ((input == 1 && balance >= 800) || (input == 2 && balance >= 1200) 
+                || (input == 3 && balance >= 1500) || (input == 4 && balance >= 3000) 
+                || (input == 5 && balance >= 800)) {
                         insertElmt(&boughtGadget, input);
                         switch (input) {
                             case 1: 
@@ -52,6 +54,11 @@ void buy(){
                             case 4: 
                                 printf("Mesin Waktu berhasil dibeli!\n");
                                 balance -= 3000;
+                                printf("Uang anda sekarang: %d\n", balance);
+                                break;
+                            case 5:
+                                printf("Senter Pengecil berhasil dibeli!\n");
+                                balance -= 800;
                                 printf("Uang anda sekarang: %d\n", balance);
                                 break;
                             default:

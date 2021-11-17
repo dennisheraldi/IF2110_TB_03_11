@@ -8,8 +8,14 @@ void tambahWaktu()
     int indeks, i, j;
     if (jumlahHeavyDiTas > 0)
     {
-        time += (1 + jumlahHeavyDiTas);
-        time2 += (1 + jumlahHeavyDiTas);
+        if (senterPengecil){
+            time++;
+            time2++;
+        } else {
+            time += (1 + jumlahHeavyDiTas);
+            time2 += (1 + jumlahHeavyDiTas);
+        }
+        
     }
     else if (isSpeedBoostActive)
     {

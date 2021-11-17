@@ -24,6 +24,9 @@ void inventory() {
         case 4:
           printf("Mesin Waktu");
           break;
+        case 5:
+          printf("Senter Pengecil");
+          break;
         case -999:
           printf("-");
           break;
@@ -88,6 +91,15 @@ void inventory() {
             }
             printf("Mesin Waktu berhasil digunakan!\n");
             deleteElmt(&boughtGadget, (input-1));
+            break;
+          case 5:
+            if (TYPE(TOP(tas)) == 'H'){
+              senterPengecil = true;
+              printf("Senter Pembesar berhasil digunakan!\n");
+              deleteElmt(&boughtGadget, (input-1));
+            } else {
+              printf("Senter Pembesar tidak dapat digunakan!\n");
+            }
             break;
           case -999:
             printf("Tidak ada gadget yang dapat digunakan pada slot ini!\n");
