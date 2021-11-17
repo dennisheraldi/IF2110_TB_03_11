@@ -64,6 +64,8 @@ int main() {
                 
             }else if(isCommandEqual("RETURN")){
                 
+            }else if(isCommandEqual("EXIT")){
+                break;
             }
         }
     } else if (isCommandEqual("LOAD GAME")) {
