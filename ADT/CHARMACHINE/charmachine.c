@@ -8,12 +8,13 @@
 char currentChar;
 boolean eot;
 boolean withFile;
+boolean saveMode;
 
 static FILE * tape;
 static int retval;
 
 
-boolean start(boolean file, char filename[]) {
+boolean start(boolean file, char filename[], boolean save) {
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang
@@ -22,21 +23,25 @@ boolean start(boolean file, char filename[]) {
           Jika currentChar = MARK maka EOP akan menyala (true) */
 
 	/* Algoritma */
+       saveMode = save;
        withFile = file;
-       if (withFile) {
-              tape = fopen(filename, "r");
-       } else {
-	       tape = stdin;
-       }
+       if (!saveMode) {
+              if (withFile) {
+                     tape = fopen(filename, "r");
+              } else {
+                     tape = stdin;
+              }
 
-       if (!withFile || tape != NULL) {
-	       adv();
+              if (!withFile || tape != NULL) {
+                     adv('c');
+              }
+       } else {
+              tape = fopen(filename, "w");
        }
-       
-       return !withFile || tape != NULL;
+       return !withFile || tape != NULL || saveMode;
 }
 
-void adv() {
+void adv(char character) {
 /* Pita dimajukan satu karakter. 
    I.S. : Karakter pada jendela = currentChar, currentChar != MARK
    F.S. : currentChar adalah karakter berikutnya dari currentChar yang lama, 
@@ -44,13 +49,21 @@ void adv() {
 	   Jika  currentChar = MARK maka EOP akan menyala (true) */
 
 	/* Algoritma */
-	retval = fscanf(tape,"%c",&currentChar);
-       if (withFile) {
-	       eot = (retval == EOF);
+       if (!saveMode) {
+              retval = fscanf(tape,"%c",&currentChar);
+              if (withFile) {
+                     eot = (retval == EOF);
+              } else {
+                     eot = (currentChar == '\n');
+              }
+              if (eot && withFile) {
+                     fclose(tape);
+              }
        } else {
-              eot = (currentChar == '\n');
+              fprintf(tape, "%c", character);
        }
-	if (eot && withFile) {
-              fclose(tape);
- 	}
+}
+
+void close() {
+       fclose(tape);
 }

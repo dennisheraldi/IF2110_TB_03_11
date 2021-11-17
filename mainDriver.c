@@ -1,4 +1,5 @@
 #include "config/config.h"
+#include "config/config_save.h"
 #include "config/initconfig.h"
 
 int time;
@@ -38,6 +39,7 @@ int main() {
         }
         printf("\n");
         config();
+        config_save();
         while(true){
             printf("Waktu: %d\n", time);
             printf("ENTER COMMAND: ");

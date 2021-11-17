@@ -21,7 +21,7 @@ void ignoreBlank()
    F.S. : currentChar ≠ BLANK atau currentChar = MARK */
 {
    while (currentChar == BLANK && currentChar != MARK || currentChar == '\n') {
-         adv();
+         adv('c');
    }
 }
 
@@ -32,7 +32,7 @@ boolean startToken(boolean file, char filename[])
           currentChar karakter pertama sesudah karakter terakhir Token */
 {
     boolean ret;
-    ret = start(file, filename);
+    ret = start(file, filename, false);
     if (ret) {
         ignoreBlank();
         if (currentChar == MARK) {
@@ -121,7 +121,7 @@ void salinToken()
             currentToken.tkn = currentChar;
             currentToken.val = -1;
         }
-        adv();
+        adv('c');
         i++;
     }
 }

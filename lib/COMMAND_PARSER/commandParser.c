@@ -20,12 +20,12 @@ void getCommand() {
 // Digunakan untuk mendapatkan input secara manual
     int i;
     i = 0;
-    start(false, "x");
+    start(false, "x", false);
     while (!eot && i < 20)
     {
         command[i] = currentChar;
         i++;
-        adv();
+        adv('c');
     }
     commandLen = i;
 }   

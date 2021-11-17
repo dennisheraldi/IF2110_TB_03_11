@@ -20,7 +20,7 @@ void ignoreBlankW()
    F.S. : currentChar ≠ BLANK atau currentChar = MARK */
 {
    while (!(currentChar != BLANK || currentChar == MARK) || currentChar == '\n') {
-         adv();
+         adv('c');
    }
 }
 
@@ -30,7 +30,7 @@ void startWord(boolean file, char filename[])
           atau endWord = false, currentWord adalah kata yang sudah diakuisisi,
           currentChar karakter pertama sesudah karakter terakhir kata */
 {
-   start(file,filename);
+   start(file,filename, false);
    ignoreBlankW();
    if (currentChar == MARK) {
       endWord = true;
@@ -67,7 +67,7 @@ void copyWord()
    i = 0;
    while (currentChar != BLANK && currentChar != MARK && i < WORDCAPACITY && currentChar != '\n') {
       currentWord.contents[i] = currentChar;
-      adv();
+      adv('c');
       i++;
    }
    currentWord.length = i;

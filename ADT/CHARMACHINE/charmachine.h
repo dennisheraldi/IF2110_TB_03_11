@@ -11,8 +11,9 @@
 extern char currentChar;
 extern boolean eot;
 extern boolean withFile;
+extern boolean saveMode;
 
-boolean start(boolean file, char filename[]);
+boolean start(boolean file, char filename[], boolean save);
 /* Mesin siap dioperasikan. Pita disiapkan untuk dibaca.
    Karakter pertama yang ada pada pita posisinya adalah pada jendela.
    I.S. : sembarang
@@ -20,12 +21,13 @@ boolean start(boolean file, char filename[]);
           Jika currentChar != MARK maka EOP akan padam (false)
           Jika currentChar = MARK maka EOP akan menyala (true) */
 
-void adv();
+void adv(char character);
 /* Pita dimajukan satu karakter. 
    I.S. : Karakter pada jendela = currentChar, currentChar != MARK
    F.S. : currentChar adalah karakter berikutnya dari currentChar yang lama, 
           currentChar mungkin = MARK
           Jika  currentChar = MARK maka EOP akan menyala (true) */
 
+void close();
 
 #endif
