@@ -51,7 +51,7 @@ void config_save() {
         adv('\n');
     }
     while (!isEmptyPrio(antrianPesanan)) {
-        dequeuePrio(&antrianPesanan, &barang);
+        barang = getElmt(savedBarang, i);
         save_number(ORDER_TIME(barang));
         adv(' ');
         adv(PICKUP_LOC(barang));

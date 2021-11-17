@@ -17,15 +17,10 @@ void config() {
     CreateStack(&tas); // Inisialisasi tas
     CreateListLinked(&inProgress); //analog dengan tas
     
-
-    char filedir[] = "newGames/";
     time = 0;
     time2 = 0;
     balance = 0;
 
-    // strcat(filedir, filename);
-
-    // startToken(true, filedir);
     row = currentToken.val;
     advToken();
     col = currentToken.val;
@@ -108,6 +103,6 @@ void config() {
             EXP_TIME(barang) = currentToken.val;
         }
         enqueuePrio(&antrianPesanan, barang);
-        // insertLast(&antrian,barang);
+        insertLast(&savedBarang,barang);
     }
 }

@@ -52,6 +52,7 @@ extern boolean isSpeedBoostActive;
 extern boolean pintuKemanaSaja;
 extern int sisaLokasi;
 extern ListLinked inProgress;
+extern ListLinked savedBarang;
 
 
 #endif

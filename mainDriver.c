@@ -22,6 +22,7 @@ int sisaLokasi;
 ListLinked inProgress;
 List boughtGadget;
 ListLinked antrian;
+ListLinked savedBarang;
 
 int main() {
     printf("MENU UTAMA\n");
