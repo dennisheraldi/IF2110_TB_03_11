@@ -27,7 +27,6 @@ ListLinked antrian;
 ListLinked savedBarang;
 boolean simpingTime;
 int returnCounter;
-int countDropOff;
 
 int main() {
     printf("MENU UTAMA\n");
@@ -78,7 +77,7 @@ int main() {
                 break;
             }
         }
-        printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", countDropOff, time2);
+        printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
     } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
     } else if (isCommandEqual("EXIT")) {
