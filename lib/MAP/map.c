@@ -39,12 +39,7 @@ boolean isAdjacent(char name) {
         i++;
     }
     idxChar = i - 1;
-    if (ELMT(adjacency, idxCurPOs, idxChar) == 1) {
-        adjacent = true;
-    } else {
-        adjacent = false;
-    }
-    return adjacent;
+    return (ELMT(adjacency, idxCurPOs, idxChar) == 1);
 }
 
 void displayMap()

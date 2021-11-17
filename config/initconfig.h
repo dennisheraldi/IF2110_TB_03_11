@@ -59,7 +59,6 @@ extern ListLinked inProgress;
 extern ListLinked savedBarang;
 extern boolean simpingTime;
 extern int returnCounter;
-extern int countDropOff;
 
 
 #endif

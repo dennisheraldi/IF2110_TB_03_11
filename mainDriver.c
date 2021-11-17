@@ -29,6 +29,9 @@ boolean simpingTime;
 int returnCounter;
 
 int main() {
+    boolean end, finish;
+    finish = false;
+    end = false;
     printf("MENU UTAMA\n");
     printf("Tentukan aksi yang mau dilakukan!\n");
     printf("- NEW GAME\n");
@@ -37,7 +40,7 @@ int main() {
     printf("Masukkan pilihan aksi: ");
     getCommand();
     if (isCommandEqual("NEW GAME")) {
-    printf("Masukkan nama file: ");
+        printf("Masukkan nama file: ");
         getCommand();
         while (!validateFileName()) {
             printStringRed("\nNama file tidak valid! (Tidak ada di dalam folder penyimpanan). Masukkan ulang nama file!\n");
@@ -47,7 +50,7 @@ int main() {
         printf("\n");
         config();
         config_save();
-        while(!isEmptyPrio(antrianPesanan) || !isEmptyS(tas) || !isEmpty(antrian)){
+        while(!end){
             printf("Waktu: %d\n", time2);
             printf("ENTER COMMAND: ");
             getCommand();
@@ -76,6 +79,13 @@ int main() {
             }else if(isCommandEqual("EXIT")){
                 break;
             }
+            if (!finish && isEmptyPrio(antrianPesanan) && isEmptyS(tas) && isEmpty(antrian)) {
+                printf("\nSelamat, Anda telah berhasil menyelesaikan game! Silakan kembali ke Headquarrters untuk melihat skor Anda.\n\n"); 
+                finish = true;   
+            }
+            if (finish && NAME(currentPosition) == '8') {
+                end = true;
+            } 
         }
         printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
     } else if (isCommandEqual("LOAD GAME")) {
