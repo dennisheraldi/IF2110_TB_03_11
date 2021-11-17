@@ -16,6 +16,7 @@ void config() {
     CreateListLS(&boughtGadget); // Inisialisasi inventory
     CreateStack(&tas); // Inisialisasi tas
     CreateListLinked(&inProgress); //analog dengan tas
+    CreateListLinked(&savedBarang);
     
     time = 0;
     time2 = 0;
@@ -104,6 +105,6 @@ void config() {
             EXP_TIME(barang) = currentToken.val;
         }
         enqueuePrio(&antrianPesanan, barang);
-        // insertLast(&savedBarang,barang);
+        insertLast(&savedBarang, barang);
     }
 }

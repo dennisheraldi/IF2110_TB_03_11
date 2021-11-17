@@ -50,21 +50,21 @@ void config_save() {
         }
         adv('\n');
     }
-    // while (!isEmptyPrio(antrianPesanan)) {
-    //     barang = getElmt(savedBarang, i);
-    //     save_number(ORDER_TIME(barang));
-    //     adv(' ');
-    //     adv(PICKUP_LOC(barang));
-    //     adv(' ');
-    //     adv(DROPOFF_LOC(barang));
-    //     adv(' ');
-    //     adv(TYPE(barang));
-    //     adv(' ');
-    //     if (TYPE(barang) == 'P') {
-    //         save_number(EXP_TIME(barang));
-    //     }
-    //     adv('\n');
-    // }
-    // adv('x');
+    for (i = 0; i < length(savedBarang); i++) {
+        barang = getElmt(savedBarang, i);
+        save_number(ORDER_TIME(barang));
+        adv(' ');
+        adv(PICKUP_LOC(barang));
+        adv(' ');
+        adv(DROPOFF_LOC(barang));
+        adv(' ');
+        adv(TYPE(barang));
+        adv(' ');
+        if (TYPE(barang) == 'P') {
+            save_number(EXP_TIME(barang));
+        }
+        adv('\n');
+    }
+    adv('x');
     close();
 }
