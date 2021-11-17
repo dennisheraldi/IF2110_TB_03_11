@@ -5,7 +5,7 @@
 void tambahWaktu()
 {
     Barang temp, elemen;
-    int indeks, i, j;
+    int indeks, i, j, n;
     if (jumlahHeavyDiTas > 0)
     {
         if (senterPengecil){
@@ -73,19 +73,39 @@ void tambahWaktu()
         j--;
     }
     //cek apakah ada pesanan baru dari antrianPesanan, bila ada tambahkan ke antrian dan enqueue ke masing-masing building
-    while ((time >= ORDER_TIME(HEADPRIO(antrianPesanan))) && (!isEmptyPrio(antrianPesanan)))
+    while ((!isEmptyPrio(antrianPesanan)) && (time >= ORDER_TIME(HEADPRIO(antrianPesanan))))
     {
         dequeuePrio(&antrianPesanan, &temp);
 
         if (TYPE(temp) == 'V') {
             simpingTime = true;
         }
-        
+
         insertLast(&antrian, temp);
         indeks = indexOfLD(buildings, PICKUP_LOC(temp));
         if (indeks != IDX_UNDEF)
         {
-            enqueue(&(ANTREAN(ELMTLD(buildings, indeks))), temp);
+            if (TYPE(temp) == 'V') {
+                printf("\nItem pesanan Shizuka (VIP) datang, kerjakan itu dulu ya!\n");
+                if (isEmptyQ(ANTREAN(ELMTLD(buildings, indeks)))) {
+                    enqueue(&(ANTREAN(ELMTLD(buildings, indeks))), temp);
+                } else {
+                    if (IDX_HEAD(ANTREAN(ELMTLD(buildings, indeks))) == 0) {
+                        n = lengthQ(ANTREAN(ELMTLD(buildings, indeks)));
+                        for (i = n; i > 0; i++) {
+                            ANTREAN(ELMTLD(buildings, indeks)).buffer[i] = ANTREAN(ELMTLD(buildings, indeks)).buffer[i - 1];
+                        }
+                        ANTREAN(ELMTLD(buildings, indeks)).buffer[0] = temp;
+                        IDX_TAIL(ANTREAN(ELMTLD(buildings, indeks)))++;
+                    } else {
+                        IDX_HEAD(ANTREAN(ELMTLD(buildings, indeks)))--;
+                        HEAD(ANTREAN(ELMTLD(buildings, indeks))) = temp;
+                    }
+                }
+
+            } else {
+                enqueue(&(ANTREAN(ELMTLD(buildings, indeks))), temp);
+            }
         }
     }
 }
