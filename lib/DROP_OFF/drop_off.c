@@ -34,6 +34,7 @@ int drop_off(){
             default:
                 break;
         }
+        pesananSelesai++;
         deleteFirst(&inProgress,&temp);
         balance += paid;
         printf("Uang yang didapatkan: %d Yen\n", paid); // tambah balance

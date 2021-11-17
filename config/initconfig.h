@@ -35,6 +35,7 @@
 extern int time;
 extern int time2;
 extern int balance;
+extern int pesananSelesai;
 extern Stack tas;
 extern Matrix adjacency;
 extern Matrix map;

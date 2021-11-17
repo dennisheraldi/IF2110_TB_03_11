@@ -20,6 +20,7 @@ void config() {
     time = 0;
     time2 = 0;
     balance = 0;
+    pesananSelesai = 0;
 
     row = currentToken.val;
     advToken();

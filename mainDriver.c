@@ -5,6 +5,7 @@
 int time;
 int time2;
 int balance;
+int pesananSelesai;
 Stack tas;
 Matrix map;
 Matrix adjacency;

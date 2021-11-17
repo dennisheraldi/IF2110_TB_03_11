@@ -40,7 +40,7 @@ void tambahWaktu()
     while (i<length(inProgress))
     {
         elemen = getElmt(inProgress, i);
-        if (TYPE(elemen) == 'p')
+        if (TYPE(elemen) == 'P')
         {
             if (time >= PICKUP_TIME(elemen) + EXP_TIME(elemen))
             {
