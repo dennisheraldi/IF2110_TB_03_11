@@ -31,6 +31,11 @@ int drop_off(){
                 // ability: increase capacity
                 NEFFQ(tas)+=1;
                 break;
+            case 'V':
+                printf("Pesanan Shizuka berhasil diantar <3\n");
+                paid = 600;
+                simpingTime = false;
+                returnCounter++;
             default:
                 break;
         }

@@ -70,6 +70,11 @@ void tambahWaktu()
     while ((time >= ORDER_TIME(HEADPRIO(antrianPesanan))) && (!isEmptyPrio(antrianPesanan)))
     {
         dequeuePrio(&antrianPesanan, &temp);
+
+        if (TYPE(temp) == 'V') {
+            simpingTime = true;
+        }
+        
         insertLast(&antrian, temp);
         indeks = indexOfLD(buildings, PICKUP_LOC(temp));
         if (indeks != IDX_UNDEF)

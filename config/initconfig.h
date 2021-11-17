@@ -30,6 +30,8 @@
 #include "../lib/HELP/help.h"
 #include "../lib/IN_PROGRESS/in_progress.h"
 #include "../lib/INVENTORY/inventory.h"
+#include "../lib/RETURN/return.h"
+
 
 
 extern int time;
@@ -54,6 +56,8 @@ extern boolean pintuKemanaSaja;
 extern int sisaLokasi;
 extern ListLinked inProgress;
 extern ListLinked savedBarang;
+extern boolean simpingTime;
+extern int returnCounter;
 
 
 #endif

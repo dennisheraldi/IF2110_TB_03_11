@@ -60,14 +60,14 @@ void setElmt(ListLinked *l, int idx, Barang val)
 /* I.S. l terdefinisi, idx indeks yang valid dalam l, yaitu 0..length(l) */
 /* F.S. Mengubah elemen l pada indeks ke-idx menjadi val */
 
-/*int indexOf(ListLinked l, Barang val)
+int indexOf(ListLinked l, Barang val)
 {
     boolean found = false;
     int idx = 0;
     Address p = l;
     while (p != NULL && !found)
     {
-        if (INFO(p) == val)
+        if (EQBarang(INFO(p), val))
         {
             found = true;
         }
@@ -84,9 +84,9 @@ void setElmt(ListLinked *l, int idx, Barang val)
     }
     else
     {
-        return IDX_UNDEF;
+        return -1;
     }
-}*/
+}
 /* I.S. l, val terdefinisi */
 /* F.S. Mencari apakah ada elemen list l yang bernilai val */
 /* Jika ada, mengembalikan indeks elemen pertama l yang bernilai val */

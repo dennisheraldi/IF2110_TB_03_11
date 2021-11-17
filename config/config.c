@@ -22,6 +22,8 @@ void config() {
     time2 = 0;
     balance = 0;
     pesananSelesai = 0;
+    simpingTime = false;
+    returnCounter = 0;
 
     row = currentToken.val;
     advToken();

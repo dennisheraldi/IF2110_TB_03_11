@@ -24,6 +24,8 @@ ListLinked inProgress;
 List boughtGadget;
 ListLinked antrian;
 ListLinked savedBarang;
+boolean simpingTime;
+int returnCounter;
 
 int main() {
     printf("MENU UTAMA\n");
@@ -69,7 +71,7 @@ int main() {
             }else if(isCommandEqual("SAVE_GAME")){
                 
             }else if(isCommandEqual("RETURN")){
-                
+                return_to_sender();
             }else if(isCommandEqual("EXIT")){
                 break;
             }

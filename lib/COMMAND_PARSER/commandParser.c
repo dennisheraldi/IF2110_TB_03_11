@@ -1,4 +1,3 @@
-// #include "../../config/initconfig.h"
 #include "commandParser.h"
 
 boolean isCommandEqual(char input[]) {
