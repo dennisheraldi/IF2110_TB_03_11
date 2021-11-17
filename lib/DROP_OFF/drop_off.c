@@ -46,6 +46,7 @@ int drop_off(){
         deleteFirst(&inProgress,&temp);
         balance += paid;
         printf("Uang yang didapatkan: %d Yen\n", paid); // tambah balance
+        countDropOff++;
         
     } else {
         printf("Tidak ada pesanan yang dapat diantarkan!\n");

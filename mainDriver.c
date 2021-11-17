@@ -27,6 +27,7 @@ ListLinked antrian;
 ListLinked savedBarang;
 boolean simpingTime;
 int returnCounter;
+int countDropOff;
 
 int main() {
     printf("MENU UTAMA\n");
@@ -47,7 +48,7 @@ int main() {
         printf("\n");
         config();
         config_save();
-        while(true){
+        while(!isEmptyPrio(antrianPesanan) || !isEmptyS(tas) || !isEmpty(antrian)){
             printf("Waktu: %d\n", time2);
             printf("ENTER COMMAND: ");
             getCommand();
@@ -77,6 +78,7 @@ int main() {
                 break;
             }
         }
+        printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", countDropOff, time2);
     } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
     } else if (isCommandEqual("EXIT")) {
