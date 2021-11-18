@@ -116,7 +116,7 @@ void salinToken()
                     currentToken.val *= 10;
                     break;
             }
-            currentToken.tkn = 'b';
+            currentToken.tkn = '8';
         } else {
             currentToken.tkn = currentChar;
             currentToken.val = -1;
