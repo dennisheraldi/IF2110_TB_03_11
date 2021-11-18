@@ -1,14 +1,6 @@
 #include <stdio.h>
 #include "stack.h"
 
-/*
-Nama: David Karel Halomoan
-NIM: 13520154
-Tanggal : 19 Oktober 2021
-Topik Praktikum: ADT Stack
-Deskripsi: File ini berisi ADT stack yang memiliki header "stack.h" (Pra Praktikum 8)
-*/
-
 /* *** Konstruktor/Kreator *** */
 void CreateStack(Stack *s)
 /* I.S. sembarang; */
