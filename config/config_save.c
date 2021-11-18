@@ -144,6 +144,9 @@ void config_save() {
         save_number(PICKUP_TIME(getElmt(listBarang, i)));
         adv('\n');
     }
+    for (i = 0; i < counter; i++) {
+        push(&tas, getElmt(listBarang, i));
+    }
     while (!isEmpty(listBarang)) {
         deleteFirst(&listBarang, &barang);
     }
@@ -168,6 +171,9 @@ void config_save() {
             save_number(EXP_TIME(getElmt(listBarang, i)));
         }
         adv('\n');
+    }
+    for (i = 0; i < counter; i++) {
+        enqueuePrio(&antrianPesanan, getElmt(listBarang, i));
     }
     save_number(jumlahHeavyDiTas);
     adv('\n');
