@@ -48,10 +48,13 @@ int main() {
             getCommand();
         }
         printf("\n");
+        printStringGreen("Loading game...\n");
         config();
         config_save();
+        printStringGreen("Game Started\n\n");
         while(!end){
             printf("Waktu: %d\n", time2);
+            printf("Uang: %d Yen\n", balance);
             printf("ENTER COMMAND: ");
             getCommand();
             if(isCommandEqual("MOVE")){
@@ -87,7 +90,9 @@ int main() {
                 end = true;
             } 
         }
-        printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
+        if (end && finish) {
+            printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
+        }
     } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
     } else if (isCommandEqual("EXIT")) {
