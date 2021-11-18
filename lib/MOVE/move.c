@@ -8,9 +8,9 @@ void tambahWaktu()
     int indeks, i, j, n;
     if (jumlahHeavyDiTas > 0)
     {
-        if (senterPengecil){
-            time++;
-            time2++;
+        if (senterPengecil){ //heavy item teratas tidak menambah beban waktu
+            time += jumlahHeavyDiTas;
+            time2 += jumlahHeavyDiTas;
         } else {
             time += (1 + jumlahHeavyDiTas);
             time2 += (1 + jumlahHeavyDiTas);
