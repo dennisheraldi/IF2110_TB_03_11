@@ -162,7 +162,12 @@ void move()
     {
         printf("ENTER COMMAND: ");
         getCommand();
-        input = command[0] - '0';
+        //hanya peduli pada input dua digit karena lokasi maksimum sejumlah 27
+        if(commandLen==1){
+            input = command[0] - '0';
+        }else if(commandLen==2){
+            input = (command[0] - '0')*10+command[1] - '0';
+        }
         valid = ((input <= counter) && (0 <= input));
         if (!valid)
         {
