@@ -56,6 +56,8 @@ The whole program was written in C.
 
 ## Project Status
 Project is:  _complete_
+  
+Semua spesifikasi dasar dan bonus telah diselesaikan
 
 
 ## Acknowledgements
