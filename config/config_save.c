@@ -10,9 +10,13 @@ void save_number(int val) {
 }
 
 void config_save() {
+    ListLinked listTas;
     start( true, "SAVED_GAMES/new.txt", true);
     int row, col, i, j, counter, val;
     Barang barang;
+
+    CreateListLinked(&listTas);
+
     row = ROWS(map);
     col = COLS(map);
     save_number(row);
@@ -65,6 +69,15 @@ void config_save() {
         }
         adv('\n');
     }
+    save_number(time);
+    adv('\n');
+    save_number(time2);
+    adv('\n');
+    save_number(balance);
+    adv('\n');
+    save_number(pesananSelesai);
+    adv('\n');
+    
     adv('x');
     close();
 }

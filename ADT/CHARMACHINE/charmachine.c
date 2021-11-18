@@ -65,5 +65,8 @@ void adv(char character) {
 }
 
 void close() {
-       fclose(tape);
+       if (tape != NULL) {
+              fclose(tape);
+       }
+       saveMode = false;
 }
