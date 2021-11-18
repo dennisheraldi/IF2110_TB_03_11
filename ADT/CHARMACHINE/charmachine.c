@@ -3,7 +3,6 @@
 
 #include "charmachine.h"
 #include <stdio.h>
-#include <string.h>
 
 char currentChar;
 boolean eot;
