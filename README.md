@@ -52,7 +52,7 @@ The whole program was written in C.
 -- Apabila proses kompilasi berhasil, file `bin` akan terbuat <br>
 -- Jalankan file `bin` dengan mengeksekusi command `./bin` <br>
 - Program berhasil dijalankan ketika muncul tampilan menu utama.
-
+<br>_Warning: Untuk file `.txt` config pada OS Windows harus disesuaikan dahulu tipe EOL Sequencenya dari CRLF menjadi LF atau dengan menghapus line terakhir. Hal ini disebabkan default pada OS Linux memakai tipe LF_
 
 ## Project Status
 Project is:  _complete_
