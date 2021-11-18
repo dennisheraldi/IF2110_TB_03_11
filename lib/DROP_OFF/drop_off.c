@@ -19,6 +19,8 @@ int drop_off(){
             case 'H':
                 printf("Pesanan Heavy Item berhasil diantarkan\n");
                 paid = 400; 
+                printf("Reward ability Speed Boost berhasil didapatkan dan diaktifkan\n");
+                printf("Waktu hanya bertambah 1 unit ketika kamu berpindah 2 lokasi \n");
                 jumlahHeavyDiTas--;
                 if (senterPengecil) {
                     senterPengecil = false;
@@ -32,10 +34,15 @@ int drop_off(){
                 printf("Pesanan Perishable Item berhasil diantarkan\n");
                 paid = 400;
                 // ability: increase capacity
+                printf("Reward ability Increase Capacity berhasil didapatkan dan diaktifkan\n");
+                printf("Kapasitas tas bertambah 1\n");
+                printf("Kapasitas tas sebelum: %d\n", NEFFQ(tas));
                 NEFFQ(tas)+=1;
+                printf("Kapasitas tas sesudah: %d\n", NEFFQ(tas));
                 break;
             case 'V':
                 printf("Pesanan Shizuka berhasil diantar <3\n");
+                printf("Reward ability Return to Sender berhasil didapatkan\n");
                 paid = 600;
                 simpingTime--;
                 returnCounter++;

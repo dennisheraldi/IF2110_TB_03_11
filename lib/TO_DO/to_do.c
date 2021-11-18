@@ -36,5 +36,22 @@ void displayList()
             p = NEXT(p);
             count++;
         }
+        counterPesanan = count;
     }
 }
+
+// int jumlahPesanan(){
+//     if (isEmpty(antrian)) {
+//         return 0;
+//     } else {
+//         int length = lengthPrio(antrianPesanan);
+//         Address p = FIRST(antrian);
+//         int count = 0;
+//         while (p != NULL)
+//         {
+//             p = NEXT(p);
+//             count++;
+//         }
+//         return count;
+//     }
+// }

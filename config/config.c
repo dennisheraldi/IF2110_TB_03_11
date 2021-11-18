@@ -24,6 +24,7 @@ void config() {
     pesananSelesai = 0;
     simpingTime = 0;
     returnCounter = 0;
+    counterPesanan = 0;
 
     row = currentToken.val;
     advToken();

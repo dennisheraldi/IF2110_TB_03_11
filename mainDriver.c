@@ -27,11 +27,13 @@ ListLinked antrian;
 ListLinked savedBarang;
 int simpingTime;
 int returnCounter;
+int counterPesanan;
 
 int main() {
-    boolean end, finish;
+    boolean end, finish, exit;
     finish = false;
     end = false;
+    exit = false;
     printf("MENU UTAMA\n");
     printf("Tentukan aksi yang mau dilakukan!\n");
     printf("- NEW GAME\n");
@@ -50,10 +52,17 @@ int main() {
         printf("\n");
         config();
         config_save();
-        while(!end){
-            printf("Waktu: %d\n", time2);
+        while(!end && !exit){
+            printf("\n");
+            printf("Posisi: %c", NAME(currentPosition));
+            TulisPOINT(LOCATION(currentPosition));
+            printf(" | Uang: %d\n", balance);
+            printf("Waktu: %d | ", time2);
+            printf("Pesanan: %d | ", length(antrian));
+            printf("Tas: %d\n", length(inProgress));
             printf("ENTER COMMAND: ");
             getCommand();
+            printf("\n");
             if(isCommandEqual("MOVE")){
                 move();
             }else if(isCommandEqual("PICK_UP")){
@@ -77,6 +86,7 @@ int main() {
             }else if(isCommandEqual("RETURN")){
                 return_to_sender();
             }else if(isCommandEqual("EXIT")){
+                exit = true;
                 break;
             }
             if (!finish && isEmptyPrio(antrianPesanan) && isEmptyS(tas) && isEmpty(antrian)) {
@@ -87,7 +97,9 @@ int main() {
                 end = true;
             } 
         }
-        printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
+        if (!exit){
+            printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
+        }
     } else if (isCommandEqual("LOAD GAME")) {
         printf("LOAD GAME\n");
     } else if (isCommandEqual("EXIT")) {

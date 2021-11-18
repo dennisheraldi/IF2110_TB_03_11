@@ -59,6 +59,7 @@ extern ListLinked inProgress;
 extern ListLinked savedBarang;
 extern int simpingTime;
 extern int returnCounter;
+extern int counterPesanan;
 
 
 #endif
