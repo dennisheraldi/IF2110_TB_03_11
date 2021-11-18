@@ -91,59 +91,5 @@ void insertElmt(List *l, ElType val);
 void deleteElmt(List *l, ElType idx);
 
 
-/* ********** OPERATOR ARITMATIKA ********** */
-/* *** Aritmatika List : Penjumlahan, pengurangan, perkalian, ... *** */
-// List plusMinusTab(List l1, List l2, boolean plus);
-// /* Prekondisi : l1 dan l2 berukuran sama dan tidak kosong */
-// /* Jika plus = true, mengirimkan  l1+l2, yaitu setiap elemen l1 dan l2 pada 
-//        indeks yang sama dijumlahkan */
-// /* Jika plus = false, mengirimkan l1-l2, yaitu setiap elemen l1 dikurangi 
-//        elemen l2 pada indeks yang sama */
-
-// /* ********** OPERATOR RELASIONAL ********** */
-// /* *** Operasi pembandingan List: *** */
-// boolean isListEqualLS(List l1, List l2);
-// /* Mengirimkan true jika l1 sama dengan l2 yaitu jika ukuran l1 = l2 dan semua 
-//    elemennya sama */
-
-/* ********** SEARCHING ********** */
-/* ***  Perhatian : List boleh kosong!! *** */
-int indexOfLS(List l, ElType val);
-/* Search apakah ada elemen List l yang bernilai val */
-/* Jika ada, menghasilkan indeks i terkecil, dengan ELMT(l,i) = val */
-/* Jika tidak ada atau jika l kosong, mengirimkan IDX_UNDEF */
-/* Skema Searching yang digunakan bebas */
-
-// /* ********** NILAI EKSTREM ********** */
-// void extremesLS(List l, ElType *max, ElType *min);
-// /* I.S. List l tidak kosong */
-// /* F.S. Max berisi nilai terbesar dalam l;
-//         Min berisi nilai terkecil dalam l */
-
-// /* ********** OPERASI LAIN ********** */
-// boolean isAllEvenLS(List l);
-// /* Menghailkan true jika semua elemen l genap */
-
-// /* ********** SORTING ********** */
-// void sortLS(List *l, boolean asc);
-// /* I.S. l boleh kosong */
-// /* F.S. Jika asc = true, l terurut membesar */
-// /*      Jika asc = false, l terurut mengecil */
-// /* Proses : Mengurutkan l dengan salah satu algoritma sorting,
-//    algoritma bebas */
-
-/* ********** MENAMBAH DAN MENGHAPUS ELEMEN DI AKHIR ********** */
-/* *** Menambahkan elemen terakhir *** */
-// void insertLastLS(List *l, ElType val);
-// /* Proses: Menambahkan val sebagai elemen terakhir List */
-// /* I.S. List l boleh kosong, tetapi tidak penuh */
-// /* F.S. val adalah elemen terakhir l yang baru */
-// /* ********** MENGHAPUS ELEMEN ********** */
-// void deleteLastLS(List *l, ElType *val);
-// /* Proses : Menghapus elemen terakhir List */
-// /* I.S. List tidak kosong */
-// /* F.S. val adalah nilai elemen terakhir l sebelum penghapusan, */
-// /*      Banyaknya elemen List berkurang satu */
-// /*      List l mungkin menjadi kosong */
 
 #endif

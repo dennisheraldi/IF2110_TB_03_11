@@ -1,6 +1,6 @@
 #include "list.c"
 #include <stdio.h>
-
+/* DRIVER ADT LIST STATIS TIDAK TERURUT */
 int main() {
     List l;
     int val;
