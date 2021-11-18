@@ -50,9 +50,11 @@ int main() {
             getCommand();
         }
         printf("\n");
+        printStringGreen("Loading game...\n");
         config();
         config_save();
-        while(!end && !exit){
+        printStringGreen("Game Started\n\n");
+        while(!end){
             printf("\n");
             printf("Posisi: %c", NAME(currentPosition));
             TulisPOINT(LOCATION(currentPosition));
@@ -97,7 +99,7 @@ int main() {
                 end = true;
             } 
         }
-        if (!exit){
+        if (end && finish) {
             printf("\nSelamat, Anda berhasil mengantar semua barang!\nTotal Barang yang Anda antar\t: %d\nWaktu yang Anda butuhkan\t: %d\n\n", pesananSelesai, time2);
         }
     } else if (isCommandEqual("LOAD GAME")) {
