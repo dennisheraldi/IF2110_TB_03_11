@@ -56,12 +56,12 @@ int main() {
         printStringGreen("Game Started\n\n");
         while(!end){
             printf("\n");
-            printf("Posisi: %c", NAME(currentPosition));
+            printStringYellow("Posisi");printf(": %c", NAME(currentPosition));
             TulisPOINT(LOCATION(currentPosition));
-            printf(" | Uang: %d\n", balance);
-            printf("Waktu: %d | ", time2);
-            printf("Pesanan: %d | ", length(antrian));
-            printf("Tas: %d\n", length(inProgress));
+            printf(" | ");printStringGreen("Uang"); printf(": %d\n", balance);
+            printStringCyan("Waktu");printf(": %d | ", time2);
+            printStringRed("Pesanan");printf(": %d | ", length(antrian));
+            printStringBlue("Tas"); printf(": %d\n", length(inProgress));
             printf("ENTER COMMAND: ");
             getCommand();
             printf("\n");
