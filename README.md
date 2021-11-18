@@ -1,90 +1,47 @@
 # IF2110_TB_11_03
 > Source code program Tugas Besar IF2110 Algoritma dan Struktur Data Kelompok 11 Kelas 03 
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+<p>Mobilita merupakan permainan berbasis CLI (command-line interface) tentang pengantaran barang yang mensimulasikan player menjadi seorang kurir dengan melacak pesanan, menavigasi peta, mengambil, dan menurunkan barang. Premis dari permainan ini adalah tokoh utama dari permainan ini, Mobita, menjadi seorang kurir demi mencari nafkah untuk keluarganya karena usaha orang tua Mobita mengalami penurunan akibat pandemi COVID-19. Bermula dari permasalahan tersebut, pemain diminta untuk membuatkan suatu aplikasi yang dapat membantunya dalam menjalankan profesinya sebagai kurir yang ditulis dalam bahasa C dengan menggunakan struktur data yang telah dipelajari di mata kuliah IF2110 Algoritma dan Struktur Data.<p>
+<p>Adapun permainan simulasi ini memiliki mekanisme yang diimplementasi dalam 13 bagian utama antara lain, main menu, mekanisme waktu, daftar pesanan, to do list, in progress list, tas, jenis item, ability, gadget, invetory gadget, peta, lokasi & command, dan game flow. Tujuan dari permainan ini adalah menyelesaikan semua pesanan secepat mungkin dengan memanfaatkan fitur-fitur yang disediakan oleh permainan.<p>
+<p>Laporan mencakup deskripsi umum persoalan game, penjelasan tambahan spesifikasi tugas, penjelasan struktur data yang digunakan, penjelasan program utama, data-data dan script yang digunakan untuk menguji keberjalanan game, dan pembagian tugas serta notulensi rapat dan lampiran lainnya.<p>
+<p>Hasil dari tugas besar ini adalah kelompok kami mampu memahami dan mengimplementasikan pengetahuan mengenai struktur data yang telah dipelajari di mata kuliah IF2110 Algoritma dan Struktur Data. Kami mempelajari juga bagaimana cara menuangkan pemahaman tersebut dengan menuliskan program secara prosedural menggunakan bahasa C. Dengan mengerjakan tugas besar ini juga kami berhasil membuat permainan sederhana dan belajar banyak hal dengan mengeksplorasi hal-hal baru dalam pengerjaan tugas besar ini.<p>
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
-
-
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
-
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+Seluruh kode pada program ini ditulis dalam bahasa C
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+- Clone terlebih dahulu repository ini.
+- Langkah selanjutnya akan disesuaikan dengan sistem operasi yang digunakan untuk menjalankan program. 
+- _Untuk pengguna Windows_<br>
+-- Buka PowerShell pada folder hasil clone repository <br>
+-- Jalankan `run.bat` yang berisi instruksi untuk meng-compile program dengan mengeksekusi command `./run` <br>
+-- Apabila proses kompilasi berhasil, file `bin.exe` akan terbuat <br>
+-- Jalankan file `bin.exe` dengan mengeksekusi command `./bin` <br>
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+- _Untuk pengguna Linux_<br>
+-- Buka Terminal pada folder hasil clone repository <br>
+-- Jalankan `script.sh` yang berisi instruksi untuk meng-compile program dengan mengeksekusi command `sh script.sh` <br>
+-- Apabila proses kompilasi berhasil, file `bin` akan terbuat <br>
+-- Jalankan file `bin` dengan mengeksekusi command `./bin` <br>
+- Program berhasil dijalankan ketika muncul tampilan menu utama.
 
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Kelompok 11 K03 IF2110 Algoritma dan Struktur Data 2021 <br>
+Anggota:
+- Nelsen Putra				            (13520130)
+- Fachry Dennis Heraldi		        (13520139)
+- Muhammad Gerald Akbar Giffera	  (13520143)
+- Rizky Ramadhana P. K. 		      (13520151)
+- David Karel Halomoan 		        (13520154)
