@@ -3,7 +3,9 @@
 Word concatenate(Word w1, Word w2);
 Word commandToWord();
 void wordToString(Word w, char * str);
-boolean validateFileName();
+boolean validateFileNameNew();
+boolean validateFileNameLoad();
+boolean cekEktensiTXT();
 void printWord(Word w);
 void printStringRed(char str[]);
 void printStringGreen(char str[]);

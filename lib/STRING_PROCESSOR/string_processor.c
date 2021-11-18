@@ -32,7 +32,7 @@ void wordToString(Word w, char str[]) {
     str[w.length] = '\0';
 }
 
-boolean validateFileName() {
+boolean validateFileNameNew() {
     Word inputName, dir, fileName;
     dir.contents[0] = 'N';
     dir.contents[1] = 'E';
@@ -50,6 +50,40 @@ boolean validateFileName() {
     fileName = concatenate(dir, inputName);
     wordToString(fileName, str);
     return startToken(true, str);
+}
+
+boolean validateFileNameLoad() {
+    Word inputName, dir, fileName;
+    dir.contents[0] = 'S';
+    dir.contents[1] = 'A';
+    dir.contents[2] = 'V';
+    dir.contents[3] = 'E';
+    dir.contents[4] = 'D';
+    dir.contents[5] = '_';
+    dir.contents[6] = 'G';
+    dir.contents[7] = 'A';
+    dir.contents[8] = 'M';
+    dir.contents[9] = 'E';
+    dir.contents[10] = 'S';
+    dir.contents[11] = '/';
+    dir.length = 12;
+    inputName = commandToWord();
+    char str[inputName.length + dir.length + 10];
+    fileName = concatenate(dir, inputName);
+    wordToString(fileName, str);
+    return startToken(true, str);
+}
+
+boolean cekEktensiTXT() {
+    boolean txt;
+    txt = commandLen > 4;
+    if (txt) {
+        txt = txt && command[commandLen - 4] == '.';
+        txt = txt && command[commandLen - 3] == 't';
+        txt = txt && command[commandLen - 2] == 'x';
+        txt = txt && command[commandLen - 1] == 't';
+    }
+    return txt;
 }
 
 void printWord(Word w) {
