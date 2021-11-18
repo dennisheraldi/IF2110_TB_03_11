@@ -115,9 +115,21 @@ void displayQueue(Queue q) {
         printf("[");
         for (i = IDX_HEAD(q); i <= IDX_TAIL(q); i++) {
             if (i == IDX_TAIL(q)) { // Untuk elemen terakhir, tidak perlu menuliskan koma setelahnya
-                printf("%d", (q).buffer[i]);
+                printf("[%d,%d,%c,%c,%c,%d]", 
+                PICKUP_TIME((q).buffer[i]),
+                ORDER_TIME((q).buffer[i]),
+                PICKUP_LOC((q).buffer[i]),
+                DROPOFF_LOC((q).buffer[i]),
+                TYPE((q).buffer[i]),
+                EXP_TIME((q).buffer[i]));
             } else {
-                printf("%d,", (q).buffer[i]);
+                printf("[%d,%d,%c,%c,%c,%d],", 
+                PICKUP_TIME((q).buffer[i]),
+                ORDER_TIME((q).buffer[i]),
+                PICKUP_LOC((q).buffer[i]),
+                DROPOFF_LOC((q).buffer[i]),
+                TYPE((q).buffer[i]),
+                EXP_TIME((q).buffer[i]));
             }
         }
         printf("]");
