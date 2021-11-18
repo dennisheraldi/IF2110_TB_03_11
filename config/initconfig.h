@@ -57,7 +57,7 @@ extern boolean senterPengecil;
 extern int sisaLokasi;
 extern ListLinked inProgress;
 extern ListLinked savedBarang;
-extern boolean simpingTime;
+extern int simpingTime;
 extern int returnCounter;
 
 

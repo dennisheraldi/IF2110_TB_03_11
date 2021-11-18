@@ -37,7 +37,7 @@ int drop_off(){
             case 'V':
                 printf("Pesanan Shizuka berhasil diantar <3\n");
                 paid = 600;
-                simpingTime = false;
+                simpingTime--;
                 returnCounter++;
             default:
                 break;

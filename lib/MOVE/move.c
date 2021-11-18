@@ -78,7 +78,7 @@ void tambahWaktu()
         dequeuePrio(&antrianPesanan, &temp);
 
         if (TYPE(temp) == 'V') {
-            simpingTime = true;
+            simpingTime++;
         }
 
         insertLast(&antrian, temp);

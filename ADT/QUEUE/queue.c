@@ -109,7 +109,7 @@ void displayQueue(Queue q) {
     /* KAMUS LOKAL */
     int i;
     /* ALGORITMA */
-    if (isEmpty(q)) {
+    if (isEmptyQ(q)) {
         printf("[]");
     } else { // q tidak kosong
         printf("[");

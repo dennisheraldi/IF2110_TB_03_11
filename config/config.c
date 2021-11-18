@@ -22,7 +22,7 @@ void config() {
     time2 = 0;
     balance = 0;
     pesananSelesai = 0;
-    simpingTime = false;
+    simpingTime = 0;
     returnCounter = 0;
 
     row = currentToken.val;

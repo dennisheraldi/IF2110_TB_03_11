@@ -25,7 +25,7 @@ ListLinked inProgress;
 List boughtGadget;
 ListLinked antrian;
 ListLinked savedBarang;
-boolean simpingTime;
+int simpingTime;
 int returnCounter;
 
 int main() {

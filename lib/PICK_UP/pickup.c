@@ -20,7 +20,7 @@ void pickup(){
     Barang temp;
     int indeks;
     //printf("isi tas %d %d", length(inProgress),NEFFQ(tas));
-    if (simpingTime) {
+    if (simpingTime > 0) {
         if(length(inProgress)<NEFFQ(tas)){
             if(isEmptyQ(ANTREAN(currentPosition))){
                 printf("Pesanan tidak ditemukan!\n");
